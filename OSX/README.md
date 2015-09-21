@@ -29,7 +29,7 @@
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
 ## Stay sane
-* [Re-map Command/Option key on Windows USB keyboard) (Instead of losing your mind](http://superuser.com/questions/80976/how-to-re-map-command-and-option-keys-on-mac-os-x-with-a-pc-keyboard)
+* [Re-map Command/Option key on Windows USB keyboard) (Instead of losing your mind)](http://superuser.com/questions/80976/how-to-re-map-command-and-option-keys-on-mac-os-x-with-a-pc-keyboard)
 
 ## Workarounds
 ### IntelliJ can't find git executable for use in exec()
