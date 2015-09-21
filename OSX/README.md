@@ -16,6 +16,7 @@
 * TextEdit
 * XCode
 * Atom by Github
+* [Funter](https://nektony.com/products/funter) Change hidden files visible / invisible
 * [SizeUp](http://www.irradiatedsoftware.com/sizeup/) by IrradiatedSoftware (maximize / center / snapback windows)
 * [Dash API lookup](https://kapeli.com/dash)
 * [Atlassian SourceTree](http://www.sourcetreeapp.com/)
