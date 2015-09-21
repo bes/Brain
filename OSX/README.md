@@ -16,6 +16,8 @@
 * TextEdit
 * XCode
 * Atom by Github
+* [GPGTools](https://gpgtools.org/)
+* [Ukelele Keyboard Layout Editor](http://scripts.sil.org/ukelele)
 * [Funter](https://nektony.com/products/funter) Change hidden files visible / invisible
 * [SizeUp](http://www.irradiatedsoftware.com/sizeup/) by IrradiatedSoftware (maximize / center / snapback windows)
 * [Dash API lookup](https://kapeli.com/dash)
