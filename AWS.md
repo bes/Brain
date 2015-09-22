@@ -7,3 +7,6 @@
 
 ##DynamoDB
 [Tutorial](http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/Welcome.html)
+
+### Run local DynamoDB
+```java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb```

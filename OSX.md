@@ -39,7 +39,11 @@ If you installed git from git-scm.org according to the instructions, you need to
 ## Potentially useful
 * [JEnv](http://www.jenv.be/) Set Java Home, locally for a given path if you want.
 
-
+## Launch an app from terminal
+Example with Atlassian SourceTree
+```
+open -a SourceTree <path/to/repository>
+```
 
 
 
