@@ -23,6 +23,7 @@
 * [Dash API lookup](https://kapeli.com/dash)
 * [Atlassian SourceTree](http://www.sourcetreeapp.com/)
 * [Smooth Mouse](http://smoothmouse.com/) for turning off mouse acceleration
+* [Karabiner](https://pqrs.org/osx/karabiner/) for increasing repeat rate and decreasing repeat wait timer
 * [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 * [Zipeg](http://www.zipeg.com/) (Zip program, seems slow?)
 
