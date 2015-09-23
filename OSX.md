@@ -11,11 +11,15 @@
 ## List of Apps to choose from (just to remember them all)
 * iTerm
 * MacPass (Native KeePass2 for MacOS)
+* [Git](http://git-scm.com/) (Follow the instructions!)
 * Emacs
 * Sublime Text 
 * TextEdit
 * XCode
-* Atom by Github
+* [OSX Fuse](https://osxfuse.github.io/) Needed by VeraCrypt
+* [VeraCrypt](https://veracrypt.codeplex.com/) If you need that sort of thing
+* [Kdiff3](http://kdiff3.sourceforge.net/) Don't forget to set it as default mergetool
+* [Atom](https://atom.io/) by Github
 * [GPGTools](https://gpgtools.org/)
 * [Ukelele Keyboard Layout Editor](http://scripts.sil.org/ukelele)
 * [Funter](https://nektony.com/products/funter) Change hidden files visible / invisible
@@ -26,6 +30,9 @@
 * [Karabiner](https://pqrs.org/osx/karabiner/) for increasing repeat rate and decreasing repeat wait timer
 * [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 * [Zipeg](http://www.zipeg.com/) (Zip program, seems slow?)
+* Chat apps (Gtalk)
+ * Flamingo (19 kr)
+ * Adium (Free)
 
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
