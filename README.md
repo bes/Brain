@@ -1,12 +1,14 @@
 # Brain
 
+Use this repository instead of your brain. Super helpful?
+
 
 
 
 
 [](================================================================================================================)
 # React JS
-Use this repository instead of your brain. Super helpful?
+
 ## Ref (getElementById React Style)
 ```
 <div ref="myExample">
@@ -15,6 +17,31 @@ React.findDOMNode(this.refs.myExample)
 ## React Bootstrap
 * https://github.com/react-bootstrap/react-bootstrap
 * http://react-bootstrap.github.io/
+
+
+
+
+
+[](================================================================================================================)
+# GPG
+## Encrypt to a specific person
+### Encrypt
+```
+pbpaste | gpg -ear <recipient>
+```
+### Decrypt
+```
+pbpaste | gpg -d
+```
+## Encrypt with a password
+### Encrypt
+```
+gpg --sign -c file.txt
+```
+### Decrypt
+```
+gpg --output <file> -d <file>.gpg
+```
 
 
 
@@ -38,7 +65,7 @@ React.findDOMNode(this.refs.myExample)
 amazon:
   #The live server location, if you want to run against it
   region: EU_WEST_1
-  dynamodb:
+  dynamoDb:
     # If this is set, run against dynamo db local
     endpoint: http://localhost:8000/
 logging:
@@ -361,6 +388,11 @@ Use dos2unix command in ubuntu
 ```
 #These won't end up in your terminal PATH
 defaults write ~/.MacOSX/environment PATH "/all/your/paths/:/paths/"
+```
+
+## Find the program running on a port
+```
+sudo lsof -i :8080
 ```
 
 ##Improve performance
