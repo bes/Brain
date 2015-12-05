@@ -408,6 +408,37 @@ Use dos2unix command in ubuntu
 
 
 [](================================================================================================================)
+# Python
+Download [Miniconda from here](http://conda.pydata.org/miniconda.html), don't forget to add conda to your PATH.
+
+## Use Conda
+```bash
+#Create a new sandbox
+conda create -n my_sandbox python=3.5
+
+#Use the sandbox in this terminal
+source activate my_sandbox
+
+#iPython is probably useful
+conda install ipython
+```
+
+## Use iPython
+```python
+$ ipython
+from webmonkey import monkey
+mon = monkey.SW()
+mon.driver...
+```
+
+
+
+
+
+
+
+
+[](================================================================================================================)
 # OSX
 ## Environment variables
 * [Environment variables for non-terminal using plist?](https://codingdaily.wordpress.com/2010/10/28/how-to-edit-macosxenvironment-plist-from-a-shell/)
