@@ -528,7 +528,7 @@ On OS X with Homebrew, you need to install `git` with `brew install git --withou
 
 Then install git-extras itself via `brew install git-extras`
 
-## Monitor bandwidth with bmon
+## Monitor network / bandwidth with bmon
 ```
 brew install bmon
 ```
