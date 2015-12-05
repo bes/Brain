@@ -200,6 +200,16 @@ git branch --track topic_branch_name origin/rel-7.2.A.0
 
 
 [](================================================================================================================)
+# Atom Editor
+## Essential packages
+* https://atom.io/packages/ctrl-last-tab
+* https://atom.io/packages/merge-conflicts
+
+
+
+
+
+[](================================================================================================================)
 # IntelliJ
 ## Enable Annotation processing in IntelliJ
 * Build, Execution, Deployment > Compiler > Annotation Processors > Enable annotation processing
