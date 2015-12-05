@@ -571,7 +571,7 @@ open -a SourceTree <path/to/repository>
 * [Kdiff3](http://kdiff3.sourceforge.net/)
 * [Git](http://git-scm.com/)
 * [Sublime](http://www.sublimetext.com/)
-
+* [Chocolatey Windows Package Manager](https://chocolatey.org/)
 
 
 
