@@ -52,13 +52,17 @@ gpg --output <file> -d <file>.gpg
 * [Answer on stackoverflow](http://stackoverflow.com/questions/16056135/how-to-use-openssl-to-encrypt-decrypt-files)
 ## Encrypt with password
 ```
-openssl enc -aes-256-cbc -salt -in <INFILE> -out <OUTFILE>
+openssl aes-256-cbc -a -salt -in <INFILE> -out <OUTFILE>
 ```
 
 ## Decrypt with password
 ```
 openssl aes-256-cbc -d -a -in <INFILE> -out <OUTFILE>
 ```
+
+## Options
+* -a Means that the file (in/out) should be in Base64
+* -d Means decrypt
 
 
 
