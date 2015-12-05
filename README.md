@@ -48,6 +48,23 @@ gpg --output <file> -d <file>.gpg
 
 
 [](================================================================================================================)
+# OpenSSL
+* [Answer on stackoverflow](http://stackoverflow.com/questions/16056135/how-to-use-openssl-to-encrypt-decrypt-files)
+## Encrypt with password
+```
+openssl enc -aes-256-cbc -salt -in <INFILE> -out <OUTFILE>
+```
+
+## Decrypt with password
+```
+openssl aes-256-cbc -d -a -in <INFILE> -out <OUTFILE>
+```
+
+
+
+
+
+[](================================================================================================================)
 # Amazon Web Services
 ## Install AWS CLI
 ```brew install awscli```
