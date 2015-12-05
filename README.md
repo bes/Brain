@@ -457,50 +457,55 @@ sudo lsof -i :8080
 MacOS X (on mid 2014 rMBP) has pretty bad performance on an external 4k display. These tips might help:
 * http://osxdaily.com/2014/10/24/speed-up-os-x-yosemite-mac/
 
-## Tips & Trix
+## Tweaks
+* [Global shortcut for dark/light mode](http://www.tekrevue.com/tip/os-x-yosemite-dark-mode-shortcut/) Control+Option+Command+T.
 * [iTerm jump and end of line](http://stackoverflow.com/questions/6205157/iterm2-how-to-get-jump-to-beginning-end-of-line-in-bash-shell)
 * [Launch sumblime text from terminal](https://gist.github.com/artero/1236170 launch sublime from terminal)
+
 
 ### Copy public key
 ```
 pbcopy < ~/.ssh/id_rsa.pub
 ```
 
-## List of Apps to choose from (just to remember them all)
+## List of OSX Apps
+### Essential
+* [Homebrew](http://brew.sh/) - brew for short.
+ * [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
 * iTerm2
- * [Solarized Theme](http://ethanschoonover.com/solarized)
-* MacPass (Native KeePass2 for MacOS)
-* [Git](http://git-scm.com/) (Follow the instructions!)
- * [Git bash completion](http://code-worrier.com/blog/autocomplete-git/)
-* Emacs
-* Sublime Text
-* TextEdit
-* XCode
-* [CyberDuck FTP Client](https://cyberduck.io/)
 * [Zsh / brew](http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
  * [Oh-My-Zsh GitHub](https://github.com/robbyrussell/oh-my-zsh), [http://ohmyz.sh/](http://ohmyz.sh/), [Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
-* Soundflower for MiniDP sound adjustment [This fork seems best right now](https://github
-.com/mLupine/SoundflowerBed/releases)
-* [OSX Fuse](https://osxfuse.github.io/) Needed by VeraCrypt
-* [VeraCrypt](https://veracrypt.codeplex.com/) If you need that sort of thing
-* [Kdiff3](http://kdiff3.sourceforge.net/) Don't forget to set it as default mergetool
-* [Atom](https://atom.io/) by Github
-* [GPGTools](https://gpgtools.org/)
-* [RVM](https://rvm.io/rvm/install) Run multiple Ruby versions simultaneously.
-* [Ukelele Keyboard Layout Editor](http://scripts.sil.org/ukelele)
-* [Funter](https://nektony.com/products/funter) Change hidden files visible / invisible
-* [SizeUp](http://www.irradiatedsoftware.com/sizeup/) by IrradiatedSoftware (maximize / center / snapback windows)
-* [Dash API lookup](https://kapeli.com/dash)
-* [Atlassian SourceTree](http://www.sourcetreeapp.com/)
+* Git - install using brew
+ * [Kdiff3](http://kdiff3.sourceforge.net/) For git-mergetool
+   * git config --global merge.tool kdiff3
+* [MacPass](https://github.com/mstarke/MacPass) (Native KeePass2 for MacOS)
+* [Hyperswitch](https://bahoom.com/hyperswitch) Command+Tab replacement
 * [Smooth Mouse](http://smoothmouse.com/) for turning off mouse acceleration
 * [Karabiner](https://pqrs.org/osx/karabiner/) for increasing repeat rate and decreasing repeat wait timer
+* [Atom](https://atom.io/) Competent text editor by Github
+* Sublime Text
+* [SizeUp](http://www.irradiatedsoftware.com/sizeup/) by IrradiatedSoftware (maximize / center / snapback windows)
+* [iStat Menus](https://bjango.com/mac/istatmenus/) Some useful status bar menus (CPU, Network, Calendar)
+* XCode
+* [RVM](https://rvm.io/rvm/install) Run multiple Ruby versions simultaneously.
+
+### Optional
+* [XnViewMP](http://www.xnview.com/) image viewer / editor
+* [CyberDuck FTP Client](https://cyberduck.io/)
+* Soundflower advanced sound input/output adjustment [This fork seems best right now](https://github
+.com/mLupine/SoundflowerBed/releases)
+* [VeraCrypt](https://veracrypt.codeplex.com/) If you need that sort of thing
+ * [OSX Fuse](https://osxfuse.github.io/) Needed by VeraCrypt
+ * [GPGTools](https://gpgtools.org/)
+* [Ukelele Keyboard Layout Editor](http://scripts.sil.org/ukelele)
+* [Funter](https://nektony.com/products/funter) Change hidden files visible / invisible
+* [Dash API lookup](https://kapeli.com/dash)
+* [Atlassian SourceTree](http://www.sourcetreeapp.com/)
 * [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 * [Zipeg](http://www.zipeg.com/) (Zip program, seems slow?)
 * Chat apps (Gtalk)
+ * Adium (Free, uglier than Flamingo but has better notifications)
  * Flamingo (19 kr)
- * Adium (Free)
-* [Localcast](http://scalableminds.github.io/localcast/#download) Stream video to Chromecast using
-* [Hyperswitch](https://bahoom.com/hyperswitch) Command+Tab replacement
 
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
