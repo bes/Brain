@@ -480,8 +480,10 @@ pbcopy < ~/.ssh/id_rsa.pub
 * [Zsh / brew](http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
  * [Oh-My-Zsh GitHub](https://github.com/robbyrussell/oh-my-zsh), [http://ohmyz.sh/](http://ohmyz.sh/), [Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
 * Git - install using brew
- * [Kdiff3](http://kdiff3.sourceforge.net/) For git-mergetool
+ * [Kdiff3](http://kdiff3.sourceforge.net/) For git-mergetool ([Set-up](http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx))
    * git config --global merge.tool kdiff3
+   * git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3
+   http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx
 * [MacPass](https://github.com/mstarke/MacPass) (Native KeePass2 for MacOS)
 * [Hyperswitch](https://bahoom.com/hyperswitch) Command+Tab replacement
 * [Smooth Mouse](http://smoothmouse.com/) for turning off mouse acceleration
