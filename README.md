@@ -493,6 +493,9 @@ Download [Miniconda from here](http://conda.pydata.org/miniconda.html), don't fo
 
 ## Use Conda
 ```bash
+#Check which sandboxes you already have
+conda info -e
+
 #Create a new sandbox
 conda create -n my_sandbox python=3.5
 
@@ -501,6 +504,9 @@ source activate my_sandbox
 
 #iPython is probably useful
 conda install ipython
+
+#When you feel done use
+source deactivate
 ```
 
 ## Use iPython
