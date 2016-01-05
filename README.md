@@ -269,6 +269,9 @@ git subtree push --prefix=<path of subtree> <remote> master
 ```
 
 
+
+
+
 [](================================================================================================================)
 # Atom Editor
 ## Essential packages
@@ -312,6 +315,13 @@ command > >(tee ~/Desktop/buildlog/stdout.log) 2> >(tee ~/Desktop/buildlog/stder
 
 [](================================================================================================================)
 # Android
+## Flashing CM
+* Find model files, download recovery & CM SW
+* Go to device Wiki & follow instructions
+## Flashing using TWRP
+* Use dd method or
+
+
 ## adb input shell script
 I usually call it `ainput`
 ```
