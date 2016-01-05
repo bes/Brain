@@ -649,6 +649,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 * [RVM](https://rvm.io/rvm/install) Run multiple Ruby versions simultaneously.
 
 ### Optional
+* [TLDR man pages](brew tap tldr-pages/tldr && brew install tldr)
 * [XnViewMP](http://www.xnview.com/) image viewer / editor
 * [CyberDuck FTP Client](https://cyberduck.io/)
 * Soundflower advanced sound input/output adjustment [This fork seems best right now](https://github
