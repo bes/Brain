@@ -7,7 +7,7 @@ Use this repository instead of your brain. Super helpful?
 
 
 [](================================================================================================================)
-# React JS
+# React
 
 ## Ref (getElementById React Style)
 ```
