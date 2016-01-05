@@ -747,6 +747,34 @@ $ sudo update-alternatives --config jar
 $ update-java-alternatives -l
 ```
 
+## OpenVPN
+### Configure the server
+Configuration in `/etc/openvpn/`. Client config in .ovpn files.
+
+```
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+```
+
+### Start the server:
+```
+sudo service openvpn start/stop/restart
+```
+
+### Connect the client:
+```
+sudo openvpn --config myconf.ovpn
+```
+
+### Configure ASUS router
+* [VPN Config](https://support.hidemyass.com/hc/en-us/articles/204449557-Asus-VPN-Client-Setup-Original-firmware-)
+
+
+* [The OpenVPN Wiki](https://community.openvpn.net/openvpn/wiki/HOWTO)
+* [Here is a guide](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-14-04) from Digitalocean.
+* [And here is another guide from the Ubuntu 14.04 help section](https://help.ubuntu.com/14.04/serverguide/openvpn.html)
+* [How to set up the ovpn file](http://serverfault.com/questions/483941/generate-an-openvpn-profile-for-client-user-to-import)
+* [Connect to a VPN using the command line and an ovpn file](http://superuser.com/questions/561816/using-openvpn-from-mac-osx-terminal-cannot-load-tun-tap)
+
 ## Ubuntu 12.04
 * VirtualBox
  * [Latest VirtualBox as package on Ubuntu 12.04](http://linuxg.net/how-to-install-virtualbox-4-3-on-ubuntu-13-04-12-10-12-04-linux-mint-15-14-13-pear-os-8-pear-os-7-and-elementary-os-0-2-via-the-official-virtualbox-repository/)
