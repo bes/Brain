@@ -62,6 +62,7 @@ gpg --output <file> -d <file>.gpg
 [](================================================================================================================)
 # OpenSSL
 * [Answer on stackoverflow](http://stackoverflow.com/questions/16056135/how-to-use-openssl-to-encrypt-decrypt-files)
+
 ## Encrypt with password
 ```
 openssl aes-256-cbc -a -salt -in <INFILE> -out <OUTFILE>
@@ -78,6 +79,38 @@ openssl aes-256-cbc -d -a -in <INFILE> -out <OUTFILE>
 
 
 
+
+
+[](================================================================================================================)
+# <a name="_ssh_head_"></a>SSH
+## Port forwarding from a remote server port to a local port
+```
+# ssh <server> -L [bind_address:]<local port>:<host>:<remote port>
+ssh <server> -L 5005:localhost:4000
+```
+
+
+
+
+
+[](================================================================================================================)
+# Java
+## Stack traces of running java process
+```
+pkill -3 java
+```
+
+Stacktrace will end up in `/var/log/<some name>.log`
+
+Use `top` and press Shift+H to see thread PIDs, convert them to 0xHex and check against the log.
+
+## Start an instance with debugging
+```
+java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=n -jar <myapp>.jar
+```
+* [More info](http://stackoverflow.com/questions/975271/remote-debugging-a-java-application)
+
+[See SSH section](#_ssh_head_) for port forwarding from a remote server
 
 
 [](================================================================================================================)
