@@ -23,6 +23,18 @@ React.findDOMNode(this.refs.myExample)
 
 
 [](================================================================================================================)
+# Webpack
+
+## Hot reloading
+* [Webpack dev server](http://webpack.github.io/docs/webpack-dev-server.html)
+* [Geowarin guide to react + spring (with proxy) hot reloading](http://geowarin.github.io/spring-boot-and-react-hot.html)
+* [Node Proxy (options)](https://github.com/nodejitsu/node-http-proxy)
+
+
+
+
+
+[](================================================================================================================)
 # GPG
 ## Encrypt to a specific person
 ### Encrypt
