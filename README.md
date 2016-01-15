@@ -723,6 +723,8 @@ $ update-java-alternatives -l
 ```
 
 ## OpenVPN
+[Example configuration files here](OpenVPN/)
+
 ### Configure the server
 Configuration in `/etc/openvpn/`. Client config in .ovpn files.
 
