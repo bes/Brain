@@ -94,21 +94,6 @@ ssh <server> -L 5005:localhost:4000
 
 
 [](================================================================================================================)
-# Git
-## Cleaning up
-```
-git remote prune origin
-# Warning will remove all 'newly created' branches as well (removes all fully merged branches from the current branch's perspective)
-git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
-
-```
-[See stackoverflow](http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged)
-
-
-
-
-
-[](================================================================================================================)
 # Java
 ## Stack traces of running java process
 ```
@@ -223,6 +208,16 @@ unsetopt xtrace
 
 [](================================================================================================================)
 # Git
+
+## Cleaning up
+```
+git remote prune origin
+# Warning will remove all 'newly created' branches as well (removes all fully merged branches from the current branch's perspective)
+git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
+
+```
+[See stackoverflow](http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged)
+
 ## List changes
 ```
 git log --oneline --graph origin/master..HEAD
@@ -255,11 +250,15 @@ git log --patch ./path/to/File.java | grep -E "(commit ([0-9]|[a-fA-F])+|((\+|\-
 ```
 
 ## Find a patch that contains specific words
+
+
 ```
+git log -Gregex
+#or
 git log -Sword
 ```
 [See answer on stack overflow](http://stackoverflow.com/questions/1337320/how-to-grep-git-commits-for-a-certain-word)
-
+* [Read this for elaboration on subtleties](http://stackoverflow.com/questions/1337320/how-to-grep-git-commit-diffs-or-contents-for-a-certain-word/1340245#1340245)
 ## Create a topic branch from a remote branch with tracking
 ```
 git branch --track topic_branch_name origin/rel-7.2.A.0
