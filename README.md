@@ -341,19 +341,14 @@ command > >(tee ~/Desktop/buildlog/stdout.log) 2> >(tee ~/Desktop/buildlog/stder
 * Use dd method or
 
 
-## adb input shell script
-I usually call it `ainput`
-```
-#!/bin/bash
-#space is %s, "" is empty string, on bash command line
-for var in "$@"
-do
-    if [ "$var" != "" ]; then
-        adb shell input text $var
-    fi
-    adb shell input keyevent KEYCODE_DPAD_DOWN
-done
-```
+## adb shell input script
+
+[ainput script on Github](https://github.com/bes/Betup/blob/master/scripts/ainput)
+
+## Android annotation processing
+Use Lombok + Android APT
+* [Lombok](https://projectlombok.org/setup/android.html)
+* [Android-apt](https://bitbucket.org/hvisser/android-apt)
 
 ## Android APK debugging
 Check for resources inside APK
