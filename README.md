@@ -94,6 +94,21 @@ ssh <server> -L 5005:localhost:4000
 
 
 [](================================================================================================================)
+# Git
+## Cleaning up
+```
+git remote prune origin
+# Warning will remove all 'newly created' branches as well (removes all fully merged branches from the current branch's perspective)
+git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
+
+```
+[See stackoverflow](http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged)
+
+
+
+
+
+[](================================================================================================================)
 # Java
 ## Stack traces of running java process
 ```
