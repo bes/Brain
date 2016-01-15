@@ -135,6 +135,11 @@ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=n -jar 
 
 [Then configure it (AWS CLI Getting Started)](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
+## Selecting which user should be used by AWS CLI
+```
+export AWS_DEFAULT_PROFILE=user2
+```
+
 ## DynamoDB
 [Tutorial](http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/Welcome.html)
 
