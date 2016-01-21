@@ -485,6 +485,20 @@ Use dos2unix command in ubuntu
 
 
 [](================================================================================================================)
+# Jekyll
+```
+# While developing
+jekyll serve
+# Before launching
+jekyll build
+```
+
+
+
+
+
+
+[](================================================================================================================)
 # IOS
 * Cocoapods dependency management https://cocoapods.org/
 * [Swift examples](Swift.md)
