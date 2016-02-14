@@ -667,6 +667,12 @@ vagrant box update
 
 [](================================================================================================================)
 # OSX
+## Settings
+Dock animation speed
+```
+defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
+```
+
 ## Environment variables
 * [Environment variables for non-terminal using plist?](https://codingdaily.wordpress.com/2010/10/28/how-to-edit-macosxenvironment-plist-from-a-shell/)
 * Not working since Yosemite? [Environment variables (not in .bashrc)](http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-mac-os-x-slash-etc-slash-launchd-dot-conf/)
