@@ -525,11 +525,64 @@ jekyll build
 
 
 
+[](================================================================================================================)
+# Environments (rbenv, jenv...)
+* [rbenv](https://github.com/rbenv/rbenv)
+* [jenv](http://www.jenv.be/)
+
+
+
+
 
 [](================================================================================================================)
 # IOS
 * Cocoapods dependency management https://cocoapods.org/
 * [Swift examples](Swift.md)
+
+## Get list of running and shut down emulators
+```
+xcrun simctl list devices
+
+#or
+
+xcrun simctl list devices | grep Booted
+```
+
+## Directory of an emulator
+```
+~/Library/Developer/CoreSimulator/Devices/<DEVICE_ID_FROM_SIMCTL>/
+```
+
+## Concurrency
+[GCD tutorial @ raywenderlich](http://www.raywenderlich.com/79149/grand-central-dispatch-tutorial-swift-part-1)
+
+* Queue types
+ * Custom Serial Queue
+ * Global Concurrent Queue
+ * Custom Concurrent Queue
+
+* Concurrent queues
+ * QOS_CLASS_USER_INTERACTIVE: UI updates, small workloads
+ * QOS_CLASS_USER_INITIATED: Waiting for immediate result, required for continued user interaction
+ * QOS_CLASS_UTILITY: Long running tasks with progress
+ * QOS_CLASS_BACKGROUND: User is unaware
+
+* Methods
+ * dispatch_get_main_queue
+ * dispatch_get_global_queue
+ * dispatch_queue_create: instantiate with reverse DNS style name
+  * DISPATCH_QUEUE_CONCURRENT
+  * DISPATCH_QUEUE_SERIAL (or) nil / NULL / 0: Serial queue
+  * dispatch_queue_attr_make_with_qos_class: Usage = private let serialQueue = dispatch_queue_create("my.reverse.dns", dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_BACKGROUND, 0))
+ * dispatch_after
+ * dispatch_sync:
+ * dispatch_async
+ * dispatch_barrier_async
+
+* Dispatch barrier (dispatch_barrier_async) advice
+ * Custom Serial Queue: Don't use dispatch barrier, doesn't make sense
+ * Global Concurrent Queue: Be careful, can starve other global tasks
+ * Custom Concurrent Queue: Do use
 
 
 
