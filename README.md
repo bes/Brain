@@ -113,6 +113,28 @@ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=n -jar 
 [See SSH section](#_ssh_head_) for port forwarding from a remote server
 
 
+
+
+
+[](================================================================================================================)
+# PHP
+
+Crontab for removing old sessions (if your inode count goes through the roof, and you can't use your system anymore...)
+
+```
+0 5  *   *   *     find /var/lib/php5 -name "sess_*" -cmin +24 | xargs rm
+```
+[Here's a post on stackoverflow for finding the place with the most files](http://stackoverflow.com/questions/653096/howto-free-inode-usage) if you run out of inodes.
+
+Check your inode count using
+```
+df -i
+```
+
+
+
+
+
 [](================================================================================================================)
 # Amazon Web Services
 ## Install AWS CLI
