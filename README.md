@@ -231,6 +231,12 @@ unsetopt xtrace
 [](================================================================================================================)
 # Git
 
+## Git worktree
+[Git worktree](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows)
+```
+git worktree add -b hotfix ../hotfix origin/master
+```
+
 ## Cleaning up
 ```
 git remote prune origin
