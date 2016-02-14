@@ -739,6 +739,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 * [Atlassian SourceTree](http://www.sourcetreeapp.com/)
 * [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 * [Zipeg](http://www.zipeg.com/) (Zip program, seems slow?)
+* [qBittorrent](http://www.qbittorrent.org/)
 * Chat apps (Gtalk)
  * Adium (Free, uglier than Flamingo but has better notifications)
  * Flamingo (19 kr)
