@@ -743,6 +743,8 @@ pbcopy < ~/.ssh/id_rsa.pub
 * Chat apps (Gtalk)
  * Adium (Free, uglier than Flamingo but has better notifications)
  * Flamingo (19 kr)
+* [Livestreamer](https://github.com/chrippa/livestreamer) (pip install livestreamer // livestreamer <Twitch URL>)
+* FFMPEG `brew install ffmpeg --with-openssl --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265`
 
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
@@ -789,6 +791,13 @@ Reenable key repeat in some apps, reboot needed:
 Example with Atlassian SourceTree
 ```
 open -a SourceTree <path/to/repository>
+```
+
+## Launch an OSX app from terminal with logs from that app
+Example: QuickTime Player
+```
+cd /Applications/QuickTime Player.app/Contents/MacOS%
+./QuickTime\ Player
 ```
 
 ## File system tracing OSX
