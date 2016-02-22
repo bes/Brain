@@ -365,9 +365,14 @@ command > >(tee ~/Desktop/buildlog/stdout.log) 2> >(tee ~/Desktop/buildlog/stder
 ## Flashing CM
 * Find model files, download recovery & CM SW
 * Go to device Wiki & follow instructions
-## Flashing using TWRP
-* Use dd method or
 
+## Assuming fs privileges for dev app: "run-as"
+```
+adb shell
+run-as com.your.packagename
+cd /data/data/com.your.pacakagename/
+```
+[See this answer on stackoverflow](http://stackoverflow.com/questions/13006315/how-to-access-data-data-folder-in-android-device)
 
 ## adb shell input script
 
