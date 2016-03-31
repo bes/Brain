@@ -697,6 +697,17 @@ mon.driver...
 
 
 [](================================================================================================================)
+# Javascript
+## Node
+### packages
+* [ncu - npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+
+
+
+
+
+
+[](================================================================================================================)
 # Virtual machine using Vagrant & VirtualBox
 [Vagrant](https://www.vagrantup.com/) is an easy way to set up virtual machines. Don't forget to install [VirtualBox](https://www.virtualbox.org/).
 ## Vagrantfile example
