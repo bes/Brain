@@ -376,6 +376,21 @@ git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 
 
 [](================================================================================================================)
+# C(++)
+## GLFW
+You need to install CMake first! Instruction for Linux/OSX:
+* [Clone GLFW from GitHub](https://github.com/glfw/glfw)
+* `cmake .`
+* `make install`
+Now you can `#include <GLFW/glfw3.h>`
+
+#ImGui
+Framework for menus / windows in OpenGL (e.g. using GLFW)
+* [Clone ImGui from GitHub](https://github.com/ocornut/imgui)
+d
+
+
+[](================================================================================================================)
 # IntelliJ
 ## Enable Annotation processing in IntelliJ
 * Build, Execution, Deployment > Compiler > Annotation Processors > Enable annotation processing
