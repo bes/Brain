@@ -222,6 +222,11 @@ pbpaste | python -m json.tool | less
 ./gradlew --refresh-dependencies dependencies
 ```
 
+## Create wrapper
+```
+gradle wrapper --gradle-version 2.11
+```
+
 ## Enable gradle daemon
 [Docs](https://docs.gradle.org/2.6/userguide/gradle_daemon.html)
 
