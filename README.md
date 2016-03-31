@@ -851,6 +851,7 @@ brew install bmon
 
 ## Stay sane
 * [Re-map Command/Option key on Windows USB keyboard) (Instead of losing your mind)](http://superuser.com/questions/80976/how-to-re-map-command-and-option-keys-on-mac-os-x-with-a-pc-keyboard)
+* [Word/Line deletion in iTerm2](https://coderwall.com/p/ds2dha/word-line-deletion-and-navigation-shortcuts-in-iterm2)
 
 ## Workarounds
 ### IntelliJ can't find git executable for use in exec()
