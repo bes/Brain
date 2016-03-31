@@ -358,7 +358,7 @@ git subtree pull --prefix <path of subtree> <remote> master --squash
 
 Contribute to upstream
 ```
-git subtree push --prefix=<path of subtree> <remote> master
+git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 ```
 
 
