@@ -6,6 +6,27 @@ Use this repository instead of your brain. Super helpful?
 
 
 
+# SSH
+## config
+```
+Host github1
+   HostName     github.com
+   User         git
+   IdentityFile ~/.ssh/id_rsa_github1
+Host github1
+  HostName     github.com
+  User         git
+  IdentityFile ~/.ssh/id_rsa_github1
+```
+
+Then register additional ssh keys using ssh-add
+```
+#-K option adds the password to your keychain, at least on OSX
+ssh-add -K ~/.ssh/your_private_key
+```
+
+
+
 [](================================================================================================================)
 # React
 
