@@ -562,11 +562,12 @@ emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 [](================================================================================================================)
 # Un*x Common
 ## make a random big file
-```
-$ sudo dd if=/dev/urandom of=/media/696fc5a9-a903-43d3-ae99-f84f559d152c/bigfile bs=1M count=458000
-#poll status of running dd
-$ sudo kill -USR1 `pidof dd`
-```
+* Linux `sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000
+* OSX `sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000`
+
+Poll status of running dd, (status will be printed in the terminal running dd).
+* Linux ```sudo kill -USR1 `pidof dd` ```
+* OSX ```sudo kill -INFO `pidof dd` ```
 
 ## Loop over a number of files and execute a command for each one
 `$ for f in $(find -name "*.apk"); do adb install -r $f; done`
