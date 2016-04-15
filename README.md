@@ -743,6 +743,7 @@ vagrant box update
 
 
 
+
 [](================================================================================================================)
 # OSX
 ## Settings
@@ -884,6 +885,11 @@ cd /Applications/QuickTime Player.app/Contents/MacOS%
 ```
 /Applications/Xcode.app/Contents/Applications/Instruments.app
 ```
+
+## Somewhat updated list of brew packages (brew list)
+`% brew list`
+
+autoconf, fribidi, libksba, node, texi2html, automake, gawk, libogg, openssl, tldr, awscli, gdbm, libpng, openvpn, tree, bash, gettext, libquvi, opus, unrar, bmon, git, libtool, pcre, wget, cairo, glib, libvo-aacenc, pixman, x264, cmake, gobject-introspection, libvorbis, pkg-config, x265, curl, gradle, libvpx, protobuf, xvid, dos2unix, grep, libyaml, protobuf-swift, xz, faac, harfbuzz, libzip, python3, yasm, fdk-aac, icu4c, lua, qt, zeromq, ffmpeg, lame, lzo, readline, zsh, findutils, libass, mplayer, sdl, fontconfig, libffi, mtr, sqlite, freetype, libgpg-error, nmap, tcl-tk
 
 
 
