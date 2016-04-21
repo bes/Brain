@@ -27,6 +27,8 @@ ssh-add -K ~/.ssh/your_private_key
 
 
 
+
+
 [](================================================================================================================)
 # React
 
@@ -264,12 +266,29 @@ exec -l $SHELL
 
 [](================================================================================================================)
 # Zsh
+[My self-answered stackoverflow/superuser question](http://superuser.com/questions/987132/zsh-git-tab-autocomplete-not-working-if-head-is-next-to-last-word-on-input)
+
 ## Enable / disable function tracing
 ```
 setopt xtrace
 my_func
 unsetopt xtrace
 ```
+
+It's also possible to use (and combined with xtrace):
+```
+setopt verbose
+my_func
+unsetopt verbose
+```
+
+## Predefined zsh functions
+* OSX: `/usr/local/share/zsh/functions`
+
+## oh-my-zsh plugins
+`~/.oh-my-zsh/plugins`
+
+
 
 
 
