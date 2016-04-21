@@ -357,6 +357,11 @@ git log -Sword
 git branch --track topic_branch_name origin/rel-7.2.A.0
 ```
 
+## Add tracking information to an existing branch
+```
+git branch -u upstream/foo
+```
+
 ## Git subtree
 [Copied from this article](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
 First add a remote
