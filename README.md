@@ -1054,3 +1054,14 @@ Then, inside windows: extend partition.
    * Scrollbars http://www.linuxbsdos.com/2012/04/27/whats-the-point-of-having-2-scrollbar-types-in-ubuntu-12-04/ and http://ubuntuforums.org/showthread.php?t=1949608
    * Show date in clock widget http://forums.fedoraforum.org/showthread.php?t=261961
 * Handbrake http://askubuntu.com/questions/107915/how-do-i-download-and-install-handbrake
+
+
+
+
+
+
+[](================================================================================================================)
+# Quotes
+## Collection of development related lol-quotes
+* ["GCD and dispatch_queue_t are still a masterpiece and the API works great in Swift"](https://www.mikeash.com/pyblog/friday-qa-2015-02-06-locks-thread-safety-and-swift.html)
+* ["Do you ever have the feeling that computer architectures come and go, but CA:AQA is forever?"](https://www.goodreads.com/review/show/1253988725?book_show_action=true)
