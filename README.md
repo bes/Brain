@@ -7,16 +7,16 @@ Use this repository instead of your brain. Super helpful?
 
 
 # SSH
-## config
+## configure multiple ssh keys for Github
 ```
 Host github1
    HostName     github.com
    User         git
    IdentityFile ~/.ssh/id_rsa_github1
-Host github1
+Host github2
   HostName     github.com
   User         git
-  IdentityFile ~/.ssh/id_rsa_github1
+  IdentityFile ~/.ssh/id_rsa_github2
 ```
 
 Then register additional ssh keys using ssh-add
@@ -25,6 +25,36 @@ Then register additional ssh keys using ssh-add
 ssh-add -K ~/.ssh/your_private_key
 ```
 
+List current keys using
+```
+ssh-add -l
+```
+
+The last step is to clone the git using the new virtual Host from the ssh config
+```
+git clone git@github1:username/projectname.git
+```
+
+## Configure ssh through another ssh proxy (use with e.g. AWS)
+```
+#The ssh proxy machine
+Host my-proxy-name
+  HostName     <ip address>
+  User         ec2-user
+  IdentityFile ~/.ssh/<identity>.pem
+
+#Connect to a host matching a pattern
+Host <partial-match-dns>-*.eu-west-1.compute.internal
+  User         ec2-user
+  IdentityFile ~/.ssh/<identity>.pem
+  ProxyCommand ssh my-proxy-name -W %h:%p
+
+#Connect to a specific host through a proxy machine running ssh
+Host <some-other-host-trivial-name>
+  User         ubuntu
+  IdentityFile ~/.ssh/spiideo-kp1.pem
+  ProxyCommand ssh my-proxy-name -W <some-specific-machine>.eu-west-1.compute.internal:22
+```
 
 
 
