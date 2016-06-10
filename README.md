@@ -853,6 +853,11 @@ Dock animation speed
 defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
 ```
 
+Show hidden files
+```
+defaults write com.apple.finder AppleShowAllFiles YES;killall Finder
+```
+
 ## Environment variables
 * [Environment variables for non-terminal using plist?](https://codingdaily.wordpress.com/2010/10/28/how-to-edit-macosxenvironment-plist-from-a-shell/)
 * Not working since Yosemite? [Environment variables (not in .bashrc)](http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-mac-os-x-slash-etc-slash-launchd-dot-conf/)
@@ -912,19 +917,16 @@ pbcopy < ~/.ssh/id_rsa.pub
 .com/mLupine/SoundflowerBed/releases)
 * [VeraCrypt](https://veracrypt.codeplex.com/) If you need that sort of thing
  * [OSX Fuse](https://osxfuse.github.io/) Needed by VeraCrypt
- * [GPGTools](https://gpgtools.org/)
+* [GPGTools](https://gpgtools.org/)
 * [Ukelele Keyboard Layout Editor](http://scripts.sil.org/ukelele)
-* [Funter](https://nektony.com/products/funter) Change hidden files visible / invisible
-* [Dash API lookup](https://kapeli.com/dash)
 * [Atlassian SourceTree](http://www.sourcetreeapp.com/)
 * [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
-* [Zipeg](http://www.zipeg.com/) (Zip program, seems slow?)
 * [qBittorrent](http://www.qbittorrent.org/)
 * Chat apps (Gtalk)
  * Adium (Free, uglier than Flamingo but has better notifications)
- * Flamingo (19 kr)
 * [Livestreamer](https://github.com/chrippa/livestreamer) (pip install livestreamer // livestreamer <Twitch URL>)
 * FFMPEG `brew install ffmpeg --with-openssl --with-fdk-aac --with-ffplay --with-freetype --with-libass --with-libquvi --with-libvorbis --with-libvpx --with-opus --with-x265`
+* [Tunnelblick OpenVPN Client](https://tunnelblick.net/)
 
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
