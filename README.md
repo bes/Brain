@@ -90,14 +90,29 @@ React.findDOMNode(this.refs.myExample)
 [](================================================================================================================)
 # GPG
 ## Encrypt to a specific person
-### Encrypt
+### From clipboard
+#### Encrypt
 ```
 pbpaste | gpg -ear <recipient>
 ```
-### Decrypt
+#### Decrypt
 ```
 pbpaste | gpg -d
 ```
+### From file
+
+#### Encrypt
+
+```
+gpg --output encrypted_file.gpg --encrypt --recipient <recipient> file_to_encrypt
+```
+
+#### Decrypt
+
+```
+gpg --output decrypted_file --decrypt encrypted_file.gpg
+```
+
 ## Encrypt with a password
 ### Encrypt
 ```
@@ -118,12 +133,12 @@ gpg --output <file> -d <file>.gpg
 
 ## Encrypt with password
 ```
-openssl aes-256-cbc -a -salt -in <INFILE> -out <OUTFILE>
+openssl aes-256-cbc -a -salt -in <INFILE> -out <OUTFILE>.openssl
 ```
 
 ## Decrypt with password
 ```
-openssl aes-256-cbc -d -a -in <INFILE> -out <OUTFILE>
+openssl aes-256-cbc -d -a -in <INFILE>.openssl -out <OUTFILE>
 ```
 
 ## Options
