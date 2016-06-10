@@ -295,6 +295,12 @@ org.gradle.daemon=true
 
 in ~/.gradle/gradle.properties
 
+## Incredible gradle documents
+[Discovering Gradle build scripts from classpath](http://jdpgrailsdev.github.io/blog/2014/07/22/gradle_build_scripts_classpath.html) (embed gradle scripts in gradle plugin)
+[Distribute Custom Gradle (wrapper with scripts?)](http://mrhaki.blogspot.se/2012/10/gradle-goodness-distribute-custom.html)
+[Provided scope in gradle](https://sinking.in/blog/provided-scope-in-gradle/), use provided scope without dependencies ending up in the distribution)
+
+
 
 
 
