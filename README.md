@@ -411,6 +411,12 @@ git log -Gregex
 #or
 git log -Sword
 ```
+
+Print the diff of each file matching the search:
+```
+git log -Sword -p
+```
+
 [See answer on stack overflow](http://stackoverflow.com/questions/1337320/how-to-grep-git-commits-for-a-certain-word)
 * [Read this for elaboration on subtleties](http://stackoverflow.com/questions/1337320/how-to-grep-git-commit-diffs-or-contents-for-a-certain-word/1340245#1340245)
 ## Create a topic branch from a remote branch with tracking
