@@ -208,6 +208,20 @@ df -i
 # Spring (Boot)
 * [Reference](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 * [API docs](http://docs.spring.io/spring-boot/docs/current/api/)
+* [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
+
+
+
+
+
+
+
+[](================================================================================================================)
+# Google
+
+## Google Sign In
+
+* [Authenticate with a backend server](https://developers.google.com/identity/sign-in/android/backend-auth#send-the-id-token-to-your-server) (Google Sign in for Android)
 
 
 
@@ -281,7 +295,7 @@ pbpaste | python -m json.tool | less
 
 ## Create wrapper
 ```
-gradle wrapper --gradle-version 2.11
+gradle wrapper --gradle-version 2.14.1
 ```
 
 ## Enable gradle daemon
@@ -306,9 +320,23 @@ in ~/.gradle/gradle.properties
 
 [](================================================================================================================)
 # GCloud
+
+[Installation instructions](https://cloud.google.com/sdk/downloads)
+
+Installing on OSX
+```
+curl https://sdk.cloud.google.com | bash
+```
+
+Using a preview command
 ```
 gcloud preview app deploy
 ```
+
+## Kubernetes
+Install kubectl `gcloud components install kubectl`
+
+
 
 
 
@@ -320,6 +348,24 @@ Restart shell
 ```
 exec -l $SHELL
 ```
+
+
+
+
+
+
+
+[](================================================================================================================)
+# Snippets
+List all changed git files and remove the first line of each file if the first line is a newline
+
+```
+git ls-files --modified | gxargs gsed -i '1{/^$/d}'
+```
+
+* http://stackoverflow.com/questions/11226938/delete-first-line-of-file-if-its-empty
+
+
 
 
 
@@ -361,6 +407,16 @@ unsetopt verbose
 [Git worktree](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows)
 ```
 git worktree add -b hotfix ../hotfix origin/master
+```
+
+When you are done with a linked working tree you can simply delete it
+```
+rm -rf ../hotfix
+```
+
+Administrative files will get gc'd, but you can do that manually too:
+```
+git worktree prune
 ```
 
 ## Cleaning up
@@ -756,6 +812,7 @@ xcrun simctl list devices | grep Booted
 
 
 
+
 [](================================================================================================================)
 # Testing network conditions using WiFi
 * [How to test your software under bad network conditions](NetworkConditionsTesting.md)
@@ -764,8 +821,13 @@ xcrun simctl list devices | grep Booted
 
 
 
+
+
 [](================================================================================================================)
 # Python
+
+[Dive Into Python 3](http://www.diveintopython3.net/)
+
 Download [Miniconda from here](http://conda.pydata.org/miniconda.html), don't forget to add conda to your PATH.
 
 ## Use Conda
@@ -992,7 +1054,25 @@ cd /Applications/QuickTime Player.app/Contents/MacOS%
 ## Somewhat updated list of brew packages (brew list)
 `% brew list`
 
-autoconf, fribidi, libksba, node, texi2html, automake, gawk, libogg, openssl, tldr, awscli, gdbm, libpng, openvpn, tree, bash, gettext, libquvi, opus, unrar, bmon, git, libtool, pcre, wget, cairo, glib, libvo-aacenc, pixman, x264, cmake, gobject-introspection, libvorbis, pkg-config, x265, curl, gradle, libvpx, protobuf, xvid, dos2unix, grep, libyaml, protobuf-swift, xz, faac, harfbuzz, libzip, python3, yasm, fdk-aac, icu4c, lua, qt, zeromq, ffmpeg, lame, lzo, readline, zsh, findutils, libass, mplayer, sdl, fontconfig, libffi, mtr, sqlite, freetype, libgpg-error, nmap, tcl-tk
+```
+autoconf          freetype          icu4c       libzip      pixman      unrar
+automake          fribidi     lame        lua         pkg-config        wget
+awscli      gawk        libass      lzo         protobuf          x264
+bash        gdbm        libffi      maven       protobuf-swift    x265
+bmon        gettext     libgpg-error      mpfr        python3     xvid
+cairo       git         libksba     mplayer     qt          xz
+cmake       glib        libogg      mtr         readline          yasm
+confuse     gmp         libpng      nmap        sdl         zeromq
+curl        gnu-sed     libquvi     node        socat       zsh
+dos2unix          gobject-introspection   libtool     openssl     sqlite
+faac        gradle      libvo-aacenc      openvpn     tcl-tk
+fdk-aac     grep        libvorbis         opus        texi2html
+findutils         groovy      libvpx      pcre        tldr
+fontconfig        harfbuzz          libyaml     pidof       tree
+```
+
+
+
 
 
 
@@ -1012,6 +1092,21 @@ autoconf, fribidi, libksba, node, texi2html, automake, gawk, libogg, openssl, tl
 
 [](================================================================================================================)
 # Linux
+
+## Sudoers
+
+This command edits the sudoers file:
+```
+sudo visudo
+```
+
+Here is an [explanation on askubuntu](http://askubuntu.com/a/443071).
+
+Another way of doing it is adding only your own user as a sudoer:
+```
+myusername     ALL=(ALL:ALL) NOPASSWD:ALL
+```
+
 ## Java alternatives
 Used to select what java versions are used, on Ubuntu Linux (probably other dists as well)
 ```
