@@ -349,8 +349,37 @@ Restart shell
 exec -l $SHELL
 ```
 
+## Zsh/Bash keyboard commands
+
+Tables generated with [Tables Generator](http://www.tablesgenerator.com/markdown_tables#)
+
+Cut / Paste in terminal (Readline Kill / Yank)
+
+| Keys | Command       |
+|------|---------------|
+| C-k  | Readline kill |
+| C-y  | Readline yank |
 
 
+Search backwards / forwards
+
+| Keys | Command          |
+|------|------------------|
+| C-r  | Search backwards |
+| C-s  | Search forwards  |
+
+
+Less commands
+
+| Keys     | Command                |
+|----------|------------------------|
+| Spacebar | Next page              |
+| b        | Previous page          |
+| /<text>  | Forward search <text>  |
+| ?<text>  | Backward search <text> |
+| n        | Next search match      |
+| N        | Previous search match  |
+| q        | Quit                   |
 
 
 
