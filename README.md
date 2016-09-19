@@ -1145,6 +1145,26 @@ $ sudo update-alternatives --config jar
 $ update-java-alternatives -l
 ```
 
+## Gnome 3
+Gnome HiDPI info on [Archlinux wiki](https://wiki.archlinux.org/index.php/HiDPI#GNOME).
+
+Basically you first scale up to 2x2 (X only supports integer scaling, Wayland probably will handle floats):
+```
+gsettings set org.gnome.desktop.interface scaling-factor 2
+# There is a UI setting for this in Gnome, but I didn't feel it went "all the way":
+Gnome Tweak Tool -> Windows -> HiDPI -> Window scaling = 2
+```
+
+Now you can "Zoom Out":
+```
+# Fetch display name
+xrandr | grep -v disconnected | grep connected | cut -d' ' -f1
+# Zoom out
+xrandr --output <DISPLAY NAME FROM PREVIOUS COMMAND> --scale 1.2x1.2
+```
+
+If you are having problems with e.g. mouse: See archlinux wiki above.
+
 ## OpenVPN
 [Example configuration files here](OpenVPN/)
 
