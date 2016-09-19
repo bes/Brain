@@ -360,6 +360,13 @@ Cut / Paste in terminal (Readline Kill / Yank)
 | C-k  | Readline kill |
 | C-y  | Readline yank |
 
+More cutting
+
+| Keys   | Command                            |
+|--------|------------------------------------|
+| Alt-d  | Cut forward to end of word         |
+| Ctrl-w | Cut backwards to beginning of word |
+| Ctrl-u | Cut backwards to beginning of line |
 
 Search backwards / forwards
 
