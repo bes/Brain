@@ -295,7 +295,7 @@ pbpaste | python -m json.tool | less
 
 ## Create wrapper
 ```
-gradle wrapper --gradle-version 2.14.1
+gradle wrapper --gradle-version 3.1
 ```
 
 ## Enable gradle daemon
@@ -1084,20 +1084,22 @@ cd /Applications/QuickTime Player.app/Contents/MacOS%
 `% brew list`
 
 ```
-autoconf          freetype          icu4c       libzip      pixman      unrar
-automake          fribidi     lame        lua         pkg-config        wget
-awscli      gawk        libass      lzo         protobuf          x264
-bash        gdbm        libffi      maven       protobuf-swift    x265
-bmon        gettext     libgpg-error      mpfr        python3     xvid
-cairo       git         libksba     mplayer     qt          xz
-cmake       glib        libogg      mtr         readline          yasm
-confuse     gmp         libpng      nmap        sdl         zeromq
-curl        gnu-sed     libquvi     node        socat       zsh
-dos2unix          gobject-introspection   libtool     openssl     sqlite
-faac        gradle      libvo-aacenc      openvpn     tcl-tk
-fdk-aac     grep        libvorbis         opus        texi2html
-findutils         groovy      libvpx      pcre        tldr
-fontconfig        harfbuzz          libyaml     pidof       tree
+autoconf    gawk      libffi      mtr     socat
+automake    gdbm      libgpg-error    nmap      sqlite
+awscli      gettext     libksba     node      stress
+bash      git     libogg      openssl     swiftlint
+bmon      glib      libpng      openvpn     tcl-tk
+cairo     gmp     libquvi     opus      texi2html
+cmake     gnu-sed     libtool     pcre      tldr
+confuse     gobject-introspection libvo-aacenc    pidof     tree
+curl      gradle      libvorbis   pixman      unrar
+dos2unix    grep      libyaml     pkg-config    wget
+faac      groovy      libzip      protobuf    x264
+fdk-aac     harfbuzz    lua     protobuf-swift    xvid
+findutils   icdiff      lzo     python3     xz
+fontconfig    icu4c     maven     qt      yasm
+freetype    lame      mpfr      readline    zeromq
+fribidi     libass      mplayer     sdl     zsh
 ```
 
 
