@@ -1131,6 +1131,22 @@ fribidi     libass      mplayer     sdl     zsh
 [](================================================================================================================)
 # Linux
 
+# Ubuntu 16.04 Xenial
+
+## Ubuntu drivers
+
+http://www.webupd8.org/2016/06/how-to-install-latest-nvidia-drivers-in.html
+
+Advice 2016-10-01:
+
+```
+Current official release: `nvidia-370` (370.28)
+Current long-lived branch release: `nvidia-367` (367.44)
+
+For GeForce 8 and 9 series GPUs use `nvidia-340` (340.98)
+For GeForce 6 and 7 series GPUs use `nvidia-304` (304.132)
+```
+
 ## Sudoers
 
 This command edits the sudoers file:
