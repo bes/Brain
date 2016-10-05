@@ -768,7 +768,8 @@ Poll status of running dd, (status will be printed in the terminal running dd).
 ## Remove CRLF at the end of lines in a file
 Use dos2unix command in ubuntu
 
-
+## List all open files and the program that is keeping the file open
+`lsof`
 
 
 
