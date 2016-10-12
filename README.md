@@ -755,7 +755,7 @@ emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 [](================================================================================================================)
 # Unix Common
 ## make a random big file
-* Linux `sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000
+* Linux `sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000`
 * OSX `sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000`
 
 Poll status of running dd, (status will be printed in the terminal running dd).
