@@ -694,7 +694,8 @@ $ tcpdump -i any -p -s 0 -w /sdcard/capture.pcap
 # "-w": write packets to a file (rather than printing to stdout)
 ```
 
-http://www.kandroid.org/online-pdk/guide/tcpdump.html
+* [Tcpdump binary in android/tcpdump](android/tcpdump)
+* [Tcpdump build guide](https://bes.github.io/guide/2016/10/12/android-tcpdump.html)
 
 Only for loopback:
 ```
