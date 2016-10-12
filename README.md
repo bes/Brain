@@ -915,7 +915,7 @@ mon.driver...
 Place [this file](vagrant/Vagrantfile) in ~/vagrant/Vagrantfile
 
 ## Vagrant up
-To start the machine in Vagrantfile do
+To start the machine in go to the directory with the Vagrantfile and do
 ```
 vagrant up
 ```
