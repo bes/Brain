@@ -957,6 +957,12 @@ Show hidden files
 defaults write com.apple.finder AppleShowAllFiles YES;killall Finder
 ```
 
+Key repeat not working in some apps, reboot needed:
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+
 ## Environment variables
 * [Environment variables for non-terminal using plist?](https://codingdaily.wordpress.com/2010/10/28/how-to-edit-macosxenvironment-plist-from-a-shell/)
 * Not working since Yosemite? [Environment variables (not in .bashrc)](http://www.dowdandassociates.com/blog/content/howto-set-an-environment-variable-in-mac-os-x-slash-etc-slash-launchd-dot-conf/)
@@ -1060,11 +1066,6 @@ brew install bmon
 ## Workarounds
 ### IntelliJ can't find git executable for use in exec()
 If you installed git from git-scm.org according to the instructions, you need to symlink /usr/bin/git to /usr/local/git/bin/git otherwise intellij can't find git in exec().
-
-### Key repeat not working in some apps (Lion)
-Reenable key repeat in some apps, reboot needed:
-```defaults write -g ApplePressAndHoldEnabled -bool false```
-
 
 ## Potentially useful
 * [JEnv](http://www.jenv.be/) Set Java Home, locally for a given path if you want.
