@@ -995,24 +995,30 @@ pbcopy < ~/.ssh/id_rsa.pub
 ### Essential
 * [Homebrew](http://brew.sh/) - brew for short.
  * [Homebrew FAQ](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md)
-* iTerm2
+* [iTerm2 (version 3)](https://www.iterm2.com/version3.html)
 * [Zsh / brew](http://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
  * [Oh-My-Zsh GitHub](https://github.com/robbyrussell/oh-my-zsh), [http://ohmyz.sh/](http://ohmyz.sh/), [Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)
-* Git - install using brew
+* Git - install using brew (see further instructions below)
  * [Kdiff3](http://kdiff3.sourceforge.net/) For git-mergetool ([Set-up](http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx))
    * git config --global merge.tool kdiff3
    * git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3
    http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx
-* [MacPass](https://github.com/mstarke/MacPass) (Native KeePass2 for MacOS)
+ * [Retina gitk](http://superuser.com/questions/620824/is-it-possible-to-have-git-gui-gitk-look-good-on-a-retina-macbook-pro)
+  * [Retinizer](http://retinizer.mikelpr.com/) - Make non-retina apps into retina apps (e.g. Gitk)
+   * brew cask install retinizer
+   * open /System/Library/Frameworks/Tk.framework/Versions/Current/Resources/
+   * Drag Wish and drop into Retinizer
+* [KeeWeb](https://keeweb.info/) (Native Electron-based KeePass2 app for MacOS)
 * [Hyperswitch](https://bahoom.com/hyperswitch) Command+Tab replacement
-* [Smooth Mouse](http://smoothmouse.com/) for turning off mouse acceleration
+* [Smooth Mouse](http://smoothmouse.com/) for turning off mouse acceleration - Does not work for Sierra :/
 * [Karabiner](https://pqrs.org/osx/karabiner/) for increasing repeat rate and decreasing repeat wait timer
 * [Atom](https://atom.io/) Competent text editor by Github
-* Sublime Text
+* [Sublime Text](https://www.sublimetext.com/)
 * [SizeUp](http://www.irradiatedsoftware.com/sizeup/) by IrradiatedSoftware (maximize / center / snapback windows)
 * [iStat Menus](https://bjango.com/mac/istatmenus/) Some useful status bar menus (CPU, Network, Calendar)
 * XCode
 * [RVM](https://rvm.io/rvm/install) Run multiple Ruby versions simultaneously.
+* [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 
 ### Optional
 * [TLDR man pages](brew tap tldr-pages/tldr && brew install tldr)
@@ -1024,8 +1030,6 @@ pbcopy < ~/.ssh/id_rsa.pub
  * [OSX Fuse](https://osxfuse.github.io/) Needed by VeraCrypt
 * [GPGTools](https://gpgtools.org/)
 * [Ukelele Keyboard Layout Editor](http://scripts.sil.org/ukelele)
-* [Atlassian SourceTree](http://www.sourcetreeapp.com/)
-* [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 * [qBittorrent](http://www.qbittorrent.org/)
 * Chat apps (Gtalk)
  * Adium (Free, uglier than Flamingo but has better notifications)
