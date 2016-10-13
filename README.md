@@ -288,6 +288,15 @@ pbpaste | python -m json.tool | less
 
 [](================================================================================================================)
 # Gradle
+
+## Debug gradle tasks in IntelliJ
+
+```
+./gradlew --no-daemon -Dorg.gradle.debug=true <task-name>
+```
+
+Then in IDEA create a "Remote" configuration on port 5005 and press debug.
+
 ## Force an update of dependencies
 ```
 ./gradlew --refresh-dependencies dependencies
