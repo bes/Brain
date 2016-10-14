@@ -955,7 +955,7 @@ vagrant box update
 
 
 [](================================================================================================================)
-# OSX
+# macOS
 ## Settings
 Dock animation speed
 ```
@@ -1098,10 +1098,23 @@ cd /Applications/QuickTime Player.app/Contents/MacOS%
 ```
 
 ## File system tracing OSX
-[Use Instruments](http://apple.stackexchange.com/questions/14409/how-to-monitor-file-access-for-an-os-x-application)
+
+Same as Unix/Linux
+
 ```
-/Applications/Xcode.app/Contents/Applications/Instruments.app
+lsof
 ```
+
+## Erase SSD / Hard drive
+
+* Turn on computer
+* When the mac sound plays press `⌘ + R`
+* Enter disk utility and mount the disk (if it is encrypted it is not auto mounted)
+* Exit disk utility, enter Terminal via menu bar
+* In terminal write diskutil `secureErase freespace 4 /Volumes/Macintosh\ HD`
+ * If your disk is named something else you need to adapt the command
+
+[Source](https://www.backblaze.com/blog/securely-erase-mac-ssd/)
 
 ## Somewhat updated list of brew packages (brew list)
 `% brew list`
