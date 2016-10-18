@@ -5,8 +5,8 @@ Use this repository instead of your brain. Super helpful?
 
 
 
-
 # SSH
+
 ## configure multiple ssh keys for Github
 ```
 Host github1
@@ -55,6 +55,13 @@ Host <some-other-host-trivial-name>
   IdentityFile ~/.ssh/spiideo-kp1.pem
   ProxyCommand ssh my-proxy-name -W <some-specific-machine>.eu-west-1.compute.internal:22
 ```
+
+
+## Easy "VPN" tunnel using SSH
+
+* Download / install [sshuttle](https://github.com/apenwarr/sshuttle/)
+* `sshuttle --dns -r username@remote-server-ip-or-name 0/0`
+
 
 
 
