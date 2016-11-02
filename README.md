@@ -771,6 +771,32 @@ emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 
 [](================================================================================================================)
 # Unix Common
+
+## Make sudo password entry visible character-by-character
+
+```
+sudo visudo
+```
+
+Find this line
+```
+Defaults        env_reset
+```
+
+Change to this line
+```
+Defaults        env_reset,pwfeedback
+```
+
+Now timeout your sudo session and test it
+```
+sudo -k
+sudo visudo # should prompt your password again
+```
+
+* [Source](http://www.howtogeek.com/194010/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux/)
+* [Source](http://lifehacker.com/make-password-asterisks-visible-in-your-linux-terminal-1183533223)
+
 ## make a random big file
 * Linux `sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000`
 * OSX `sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000`
