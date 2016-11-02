@@ -1082,6 +1082,55 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
+## Brew / Homebrew
+
+### List packages
+```
+brew list
+```
+
+### Fetch new package info
+```
+brew update
+```
+
+### List outdated packages
+```
+brew outdated
+```
+
+### Upgrade outdated package
+```
+brew upgrade <pkg>
+```
+
+### Upgrade all packages
+```
+brew upgrade
+```
+
+### Essential brew packages (with explanations)
+
+Install with brew install <name>
+
+* awscli
+* bmon - (network monitoring)
+* curl
+* [findutils](https://www.gnu.org/software/findutils/) - (GNU findutils gfind, gxargs, ...)
+* gradle
+* [grep] - (ggrep)
+* groovy - (Groovy programming language)
+* [moreutils](https://joeyh.name/code/moreutils/) (contains ts for prepending datetime to terminal lines)
+* [nmap](https://nmap.org/) - (Network mapper)
+* node - (NodeJS)
+* openssl
+* [pidof](https://linux.die.net/man/8/pidof) - (find PIDs of named program)
+* swiftlint - (XCode swift linting)
+* tree
+* unrar
+* wget
+* zsh
+
 ## Git for OSX
 Install:
 ```
