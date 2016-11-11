@@ -833,8 +833,8 @@ lsof
 dig +short myip.opendns.com @resolver1.opendns.com
 ```
 
-*[Source](http://askubuntu.com/a/145017/221354)
-*[Also available on Betup](https://github.com/bes/Betup/blob/master/scripts/myip)
+* [Source](http://askubuntu.com/a/145017/221354)
+* [Also available on Betup](https://github.com/bes/Betup/blob/master/scripts/myip)
 
 
 
