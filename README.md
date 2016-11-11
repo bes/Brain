@@ -776,43 +776,67 @@ emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 
 ```
 sudo visudo
-```
 
-Find this line
-```
+# Find this line
 Defaults        env_reset
-```
 
-Change to this line
-```
+# Change to this line
 Defaults        env_reset,pwfeedback
-```
 
-Now timeout your sudo session and test it
-```
+# Now timeout your sudo session and test it
 sudo -k
-sudo visudo # should prompt your password again
+
+# Should prompt your password again
+sudo visudo
 ```
 
 * [Source](http://www.howtogeek.com/194010/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux/)
 * [Source](http://lifehacker.com/make-password-asterisks-visible-in-your-linux-terminal-1183533223)
 
 ## make a random big file
-* Linux `sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000`
-* OSX `sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000`
+### Linux
 
 Poll status of running dd, (status will be printed in the terminal running dd).
-* Linux ```sudo kill -USR1 `pidof dd` ```
-* OSX ```sudo kill -INFO `pidof dd` ```
+
+```
+sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000
+
+#check status
+sudo kill -USR1 `pidof dd`
+```
+
+### OSX
+
+```
+sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000
+#check status
+sudo kill -INFO `pidof dd`
+```
 
 ## Loop over a number of files and execute a command for each one
-`$ for f in $(find -name "*.apk"); do adb install -r $f; done`
+```
+for f in $(find -name "*.apk"); do adb install -r $f; done
+```
 
 ## Remove CRLF at the end of lines in a file
 Use dos2unix command in ubuntu
 
 ## List all open files and the program that is keeping the file open
-`lsof`
+
+```
+lsof
+```
+
+## Find my external ip using the command line
+
+```
+dig +short myip.opendns.com @resolver1.opendns.com
+```
+
+*[Source](http://askubuntu.com/a/145017/221354)
+*[Also available on Betup](https://github.com/bes/Betup/blob/master/scripts/myip)
+
+
 
 
 
