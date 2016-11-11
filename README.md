@@ -793,7 +793,7 @@ sudo visudo
 * [Source](http://www.howtogeek.com/194010/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux/)
 * [Source](http://lifehacker.com/make-password-asterisks-visible-in-your-linux-terminal-1183533223)
 
-## make a random big file
+## Make a random big file
 ### Linux
 
 Poll status of running dd, (status will be printed in the terminal running dd).
