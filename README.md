@@ -170,6 +170,11 @@ ssh <server> -L 5005:localhost:4000
 
 [](================================================================================================================)
 # Java
+
+## Measure Heap space graphically
+
+Use [VisualVM](https://visualvm.github.io/)
+
 ## Stack traces of running java process
 ```
 pkill -3 java
