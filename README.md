@@ -90,7 +90,22 @@ React.findDOMNode(this.refs.myExample)
 * [Geowarin guide to react + spring (with proxy) hot reloading](http://geowarin.github.io/spring-boot-and-react-hot.html)
 * [Node Proxy (options)](https://github.com/nodejitsu/node-http-proxy)
 
+## Size report for package
 
+Install the webpack size analyzer
+
+```
+npm install -g webpack-bundle-size-analyzer
+```
+
+Then analyze your bundle:
+
+```
+./node_modules/.bin/webpack --json | webpack-bundle-size-analyzer
+```
+
+N.B: You may not output anything using console.log from your script when analyzing, since
+`webpack-bundle-size-analyzer` will break down.
 
 
 
