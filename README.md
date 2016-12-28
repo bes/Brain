@@ -1166,6 +1166,16 @@ brew upgrade <pkg>
 brew upgrade
 ```
 
+### Cleanup / Remove unused versions
+
+This command is very useful because a lot of space can be wasted on unused versions
+
+```
+brew cleanup
+```
+
+
+
 ### Essential brew packages (with explanations)
 
 Install with brew install <name>
