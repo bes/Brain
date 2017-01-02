@@ -316,6 +316,20 @@ pbpaste | python -m json.tool | less
 [](================================================================================================================)
 # Gradle
 
+## Additional command line properties for gradle
+
+Additional properties are given on the command line as
+
+```
+./gradlew task1 task2 task3 '-PmyPropertyName=some-value'
+```
+
+The properties can be used in gradle tasks/plugins/etc:
+
+```
+project.findProperty("myPropertyName")
+```
+
 ## Debug gradle tasks in IntelliJ
 
 ```
