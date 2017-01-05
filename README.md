@@ -66,17 +66,24 @@ Host <some-other-host-trivial-name>
 
 
 
+
 [](================================================================================================================)
 # React
 
 ## Ref (getElementById React Style)
+
 ```
-<div ref="myExample">
-React.findDOMNode(this.refs.myExample)
+<div ref={node => { this.myExample = node }}">
 ```
+
+Now you can use `this.myExample` after rendering.
+
 ## React Bootstrap
+
 * https://github.com/react-bootstrap/react-bootstrap
 * http://react-bootstrap.github.io/
+
+
 
 
 
