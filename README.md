@@ -249,6 +249,34 @@ df -i
 
 
 
+[](================================================================================================================)
+# Docker
+
+## Run a container
+* `-e`: supply environment variable
+* `-it`: interactive shell, if necessary
+* `--rm`: means temporary container, will be removed after exit
+* `-p`: map port from HOST:CONTAINER
+
+```
+docker run -e SOME_ENV_VARIABLE='true' --rm -it -p 8080:8080 name/of/image:version
+```
+
+## Remove orphaned / dangling volumes
+```
+# List them
+docker volume ls -qf dangling=true
+
+# Remove them
+docker volume rm $(docker volume ls -qf dangling=true)
+```
+
+
+
+
+
+
+
 
 [](================================================================================================================)
 # Google
