@@ -1051,12 +1051,35 @@ mon.driver...
 
 [](================================================================================================================)
 # Javascript
+
 ## Node
 ### packages
 * [ncu - npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
 
+## Prepare a canvas for HiDPI use
+```
+pixelRatio(canvas) {
+  var ctx = canvas.getContext("2d"),
+    dpr = window.devicePixelRatio || 1,
+    bsr = ctx.webkitBackingStorePixelRatio ||
+      ctx.mozBackingStorePixelRatio ||
+      ctx.msBackingStorePixelRatio ||
+      ctx.oBackingStorePixelRatio ||
+      ctx.backingStorePixelRatio || 1;
 
+  return dpr / bsr;
+}
+
+prepareCanvas(canvas, width, height) {
+  var pixelRatio = this.pixelRatio(canvas);
+  canvas.width = width * pixelRatio;
+  canvas.height = height * pixelRatio;
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+  return pixelRatio;
+}
+```
 
 
 
