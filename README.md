@@ -447,11 +447,16 @@ Cut / Paste in terminal (Readline Kill / Yank)
 
 More cutting
 
-| Keys   | Command                            |
-|--------|------------------------------------|
-| Alt-d  | Cut forward to end of word         |
-| Ctrl-w | Cut backwards to beginning of word |
-| Ctrl-u | Cut backwards to beginning of line |
+| Keys       | Command                             |
+|------------|-------------------------------------|
+| Alt-d      | Cut forward to end of word          |
+| Ctrl-w     | Cut backwards to beginning of word  |
+| Ctrl-u     | Cut backwards to beginning of line  |
+| Ctrl-space | Set mark (start selecting)          |
+| Ctrl-2     | Set mark (same as Ctrl-space)       |
+| Alt-w      | Cut marked area                     |
+| Ctrl-x-x   | Start marking in opposite direction |
+
 
 Search backwards / forwards
 
