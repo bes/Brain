@@ -890,7 +890,7 @@ sudo dd if=/dev/urandom of=./bigfile bs=1M count=458000
 sudo kill -USR1 `pidof dd`
 ```
 
-### OSX
+### macOS
 
 ```
 sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000
@@ -1139,6 +1139,13 @@ nmap -sn 192.168.1.0/24
 [](================================================================================================================)
 # macOS
 ## Settings
+
+Keyboard repeat rate - sign out required?
+```
+defaults write -g KeyRepeat -float 1.8
+defaults write -g InitialKeyRepeat -int 15
+```
+
 Dock animation speed
 ```
 defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock
