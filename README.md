@@ -967,6 +967,12 @@ Use dos2unix command in ubuntu
 lsof
 ```
 
+Or on macos you can also use
+
+```
+sudo fs_usage
+```
+
 ## Find my external ip using the command line
 
 ```
