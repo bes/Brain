@@ -1119,6 +1119,19 @@ mon.driver...
 # Javascript
 
 ## Node
+
+### NVM
+* [NVM on Github](https://github.com/creationix/nvm)
+
+Example: Node 7.10 and NPM 5.0.1
+
+```
+nvm install 7.10
+nvm use 7.10
+npm install -g npm@5.0.1
+```
+
+
 ### packages
 * [ncu - npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
