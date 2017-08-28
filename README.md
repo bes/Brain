@@ -1173,11 +1173,13 @@ To start the machine in go to the directory with the Vagrantfile and do
 ```
 vagrant up
 ```
+
 ## Vagrant ssh
 To enter the machine do
 ```
 vagrant ssh
 ```
+
 ## More commands
 ```
 #Save the current state and stop
