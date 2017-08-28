@@ -280,11 +280,24 @@ df -i
 [](================================================================================================================)
 # Docker
 
+## List images
+
+`docker images`
+
+## List containers
+
+`docker ps`
+
+Or to show all containers
+
+`docker ps -a`
+
 ## Run a container
 * `-e`: supply environment variable
 * `-it`: interactive shell, if necessary
 * `--rm`: means temporary container, will be removed after exit
 * `-p`: map port from HOST:CONTAINER
+* `-d`: Detach - Run container in background and print container ID
 
 ```
 docker run -e SOME_ENV_VARIABLE='true' --rm -it -p 8080:8080 name/of/image:version
@@ -292,16 +305,17 @@ docker run -e SOME_ENV_VARIABLE='true' --rm -it -p 8080:8080 name/of/image:versi
 
 ## Remove orphaned / dangling volumes
 ```
-# List them
+### List them
 docker volume ls -qf dangling=true
 
-# Remove them
+### Remove them
 docker volume rm $(docker volume ls -qf dangling=true)
 ```
 
 
+## Simple Docker UI
 
-
+An app for managing Docker images locally: [Simple Docker UI](https://github.com/felixgborrego/simple-docker-ui)
 
 
 
