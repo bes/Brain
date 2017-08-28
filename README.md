@@ -927,6 +927,12 @@ sudo visudo
 * [Source](http://www.howtogeek.com/194010/how-to-make-password-asterisks-visible-in-the-terminal-window-in-linux/)
 * [Source](http://lifehacker.com/make-password-asterisks-visible-in-your-linux-terminal-1183533223)
 
+## Make a random string
+
+```
+RANDOM_STRING=$(env LC_CTYPE=C tr -dc 'a-zA-Z0-9' < /dev/urandom | fold -w 64 | head -n 1)
+```
+
 ## Make a random big file
 ### Linux
 
