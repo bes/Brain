@@ -190,6 +190,34 @@ ssh <server> -L 5005:localhost:4000
 
 
 
+
+
+
+[](================================================================================================================)
+# Golang
+
+## GORE Go REPL
+
+[https://github.com/motemen/gore](Golan REPL)
+
+A good use of gore might be to get current epoch nanos
+
+```
+$ gore
+:import time
+time.Now().UnixNano()
+```
+
+
+
+
+
+
+
+
+
+
+
 [](================================================================================================================)
 # Java
 
