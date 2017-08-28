@@ -571,6 +571,13 @@ unsetopt verbose
 [](================================================================================================================)
 # Git
 
+## Git configuration
+
+Tell Git not to guess, but rather insist that you set user.name and user.email explicitly before it will let you commit:
+```
+git config --global --add user.useConfigOnly true
+```
+
 ## Git worktree
 [Git worktree](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows)
 ```
