@@ -21,8 +21,7 @@ Host github2
 
 Then register additional ssh keys using ssh-add
 ```
-#-K option adds the password to your keychain, at least on OSX
-ssh-add -K ~/.ssh/your_private_key
+ssh-add -t 12h ~/.ssh/your_private_key
 ```
 
 List current keys using
