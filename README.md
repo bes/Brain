@@ -1237,6 +1237,31 @@ Key repeat not working in some apps, reboot needed:
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
+## Kernel modules extensions (.kext)
+
+Kernel modules can be located in these locations
+* User kexts `/Library/Extensions`
+* System kexts `/System/Library/Extensions`
+
+### Uninstall a .kext
+
+```
+sudo kextunload /Library/Extensions/SomeKernelExtension.kext
+sudo rm -rf /Library/Extensions/SomeKernelExtension.kext
+```
+
+Also check if there are things hanging around in `Receipts`
+
+```
+# Remove any Receipts that belong to a .kext
+lsa -lsa /Library/Receipts/
+```
+
+## Check what is preventing your computer from going to sleep
+
+```
+pmset -g assertions
+```
 
 ## Environment variables
 * [Environment variables for non-terminal using plist?](https://codingdaily.wordpress.com/2010/10/28/how-to-edit-macosxenvironment-plist-from-a-shell/)
