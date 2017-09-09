@@ -1242,6 +1242,12 @@ Kernel modules can be located in these locations
 * User kexts `/Library/Extensions`
 * System kexts `/System/Library/Extensions`
 
+### List loaded modules
+
+```
+kextstat
+```
+
 ### Uninstall a .kext
 
 ```
