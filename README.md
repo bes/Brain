@@ -1262,6 +1262,21 @@ Also check if there are things hanging around in `Receipts`
 lsa -lsa /Library/Receipts/
 ```
 
+## Multiple disk dropbox sync
+
+Follow this [guide](http://lifehacker.com/5971204/run-multiple-dropbox-accounts-on-one-computer) on Lifehacker. Or from the [original source](http://theterran.com/blog/2012/6/14/use-two-dropbox-accounts-on-one-computer.html#fn:3).
+
+But use the modified version below to avoid the Automator Cog, which shows up unless you redirect the log to `/dev/null`.
+
+Basically:
+
+* Create a folder somewhere, e.g. in home folder called `~/.dropbox2`
+* In Automator
+    * File > New > Application option
+    * Drag the "Run Shell Script" action into the main window
+    * Paste this `HOME=$HOME/.dropbox2 /Applications/Dropbox.app/Contents/MacOS/Dropbox &>/dev/null &`
+    * When the disk is attached, run the program - When the disk is attached, close Dropbox2 (exit the second dropbox instance).
+
 ## Check what is preventing your computer from going to sleep
 
 ```
