@@ -1321,7 +1321,6 @@ pbcopy < ~/.ssh/id_rsa.pub
 * Git - install using brew (see further instructions below)
  * [Kdiff3](http://kdiff3.sourceforge.net/) For git-mergetool ([Set-up](http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx))
    * git config --global merge.tool kdiff3
-   * git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3
    http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx
  * [Retina gitk](http://superuser.com/questions/620824/is-it-possible-to-have-git-gui-gitk-look-good-on-a-retina-macbook-pro)
   * [Retinizer](http://retinizer.mikelpr.com/) - Make non-retina apps into retina apps (e.g. Gitk)
