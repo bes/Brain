@@ -1579,17 +1579,26 @@ If you are having problems with e.g. mouse: See archlinux wiki above.
 Configuration in `/etc/openvpn/`. Client config in .ovpn files.
 
 ```
-iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o <DEVICE e.g. eth0 but probably something else> -j MASQUERADE
 ```
 
-### Start the server:
+And clear the rule when done
 ```
-sudo service openvpn start/stop/restart
+sudo iptables -t nat -F
 ```
 
-### Connect the client:
+### Using the server:
+
+Update local `name.ovpn` file with the current correct external IP of the VPN server.
+
+"server" in the command is the name of the configuration file
 ```
-sudo openvpn --config myconf.ovpn
+sudo systemctl start openvpn@server
+```
+
+Restart
+```
+sudo systemctl restart openvpn@server
 ```
 
 ### Configure ASUS router
