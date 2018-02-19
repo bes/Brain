@@ -1250,6 +1250,11 @@ Key repeat not working in some apps, reboot needed:
 defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
+Set the screenshot directory
+```
+defaults write com.apple.screencapture location /Users/myuser/some/path
+```
+
 ## Kernel modules extensions (.kext)
 
 Kernel modules can be located in these locations
