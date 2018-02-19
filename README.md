@@ -1340,7 +1340,6 @@ pbcopy < ~/.ssh/id_rsa.pub
 * Git - install using brew (see further instructions below)
  * [Kdiff3](http://kdiff3.sourceforge.net/) For git-mergetool ([Set-up](http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx))
    * git config --global merge.tool kdiff3
-   * git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3
    http://stackoverflow.com/questions/9776434/git-mergetool-config-on-mac-osx
  * [Retina gitk](http://superuser.com/questions/620824/is-it-possible-to-have-git-gui-gitk-look-good-on-a-retina-macbook-pro)
   * [Retinizer](http://retinizer.mikelpr.com/) - Make non-retina apps into retina apps (e.g. Gitk)
@@ -1598,17 +1597,26 @@ If you are having problems with e.g. mouse: See archlinux wiki above.
 Configuration in `/etc/openvpn/`. Client config in .ovpn files.
 
 ```
-iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o <DEVICE e.g. eth0 but probably something else> -j MASQUERADE
 ```
 
-### Start the server:
+And clear the rule when done
 ```
-sudo service openvpn start/stop/restart
+sudo iptables -t nat -F
 ```
 
-### Connect the client:
+### Using the server:
+
+Update local `name.ovpn` file with the current correct external IP of the VPN server.
+
+"server" in the command is the name of the configuration file
 ```
-sudo openvpn --config myconf.ovpn
+sudo systemctl start openvpn@server
+```
+
+Restart
+```
+sudo systemctl restart openvpn@server
 ```
 
 ### Configure ASUS router
