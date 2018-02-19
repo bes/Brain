@@ -1119,6 +1119,20 @@ mon.driver...
 
 ## Node
 
+### Stringify
+
+JSON.stringify is great but sometimes complex node objects have recursive pointers.
+
+Use this instead:
+
+```
+const util = require('util')
+
+console.log(util.inspect(myObject, {showHidden: false, depth: null}))
+```
+
+Or just use `console.log` or `console.dir` which use it implicitly.
+
 ### NVM
 * [NVM on Github](https://github.com/creationix/nvm)
 
