@@ -1013,11 +1013,13 @@ jekyll build
 
 
 [](================================================================================================================)
-# IOS
+# iOS / XCode
+
 * Cocoapods dependency management https://cocoapods.org/
 * [Swift examples](Swift.md)
 
 ## Get list of running and shut down emulators
+
 ```
 xcrun simctl list devices
 
@@ -1027,9 +1029,20 @@ xcrun simctl list devices | grep Booted
 ```
 
 ## Directory of an emulator
+
 ```
 ~/Library/Developer/CoreSimulator/Devices/<DEVICE_ID_FROM_SIMCTL>/
 ```
+
+## Directory for iOS Device Support
+
+```
+~/Library/Developer/Xcode/iOS DeviceSupport/
+```
+
+## Archives
+
+Delete from Organizer
 
 ## Concurrency
 [GCD tutorial @ raywenderlich](http://www.raywenderlich.com/79149/grand-central-dispatch-tutorial-swift-part-1)
