@@ -197,7 +197,7 @@ ssh -N -L 5005:localhost:4000 some.ssh.server.com
 
 ## GORE Go REPL
 
-[https://github.com/motemen/gore](Golan REPL)
+[https://github.com/motemen/gore](Golang REPL)
 
 A good use of gore might be to get current epoch nanos
 
@@ -433,7 +433,7 @@ Put
 org.gradle.daemon=true
 ```
 
-in ~/.gradle/gradle.properties
+in `~/.gradle/gradle.properties`
 
 ## Incredible gradle documents
 [Discovering Gradle build scripts from classpath](http://jdpgrailsdev.github.io/blog/2014/07/22/gradle_build_scripts_classpath.html) (embed gradle scripts in gradle plugin)
@@ -770,11 +770,13 @@ command > >(tee ~/Desktop/buildlog/stdout.log) 2> >(tee ~/Desktop/buildlog/stder
 * Go to device Wiki & follow instructions
 
 ## Assuming fs privileges for dev app: "run-as"
+
 ```
 adb shell
 run-as com.your.packagename
 cd /data/data/com.your.pacakagename/
 ```
+
 [See this answer on stackoverflow](http://stackoverflow.com/questions/13006315/how-to-access-data-data-folder-in-android-device)
 
 ## adb shell input script
@@ -782,13 +784,15 @@ cd /data/data/com.your.pacakagename/
 [ainput script on Github](https://github.com/bes/Betup/blob/master/scripts/ainput)
 
 ## Android annotation processing
+
 Use Lombok + Android APT
 * [Lombok](https://projectlombok.org/setup/android.html)
 * [Android-apt](https://bitbucket.org/hvisser/android-apt)
 
 ## Android APK debugging
+
 Check for resources inside APK
-~/sdk/android-curr/build-tools/21.1.1/aapt dump resources build/outputs/apk/MyApk.apk | grep raw/
+`~/sdk/android-curr/build-tools/21.1.1/aapt dump resources build/outputs/apk/MyApk.apk | grep raw/`
 
 ## Android System / Apps
 
