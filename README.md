@@ -1036,8 +1036,17 @@ jekyll build
 [](================================================================================================================)
 # iOS / XCode
 
-* Cocoapods dependency management https://cocoapods.org/
-* [Swift examples](Swift.md)
+## Investigate crash without proper stack with attached debugger
+
+First try to find the memory address of the instance you want to inspect. That can be done with e.g. the memory graph
+in XCode.
+
+Then, in the LLDB prompt:
+
+```
+(lldb) expr -l Swift -- let $my = unsafeBitCast(0x98f63c31, to: MyClass.self)
+(lldb) expr -l Swift -- print($my.thing)
+```
 
 ## Get list of running and shut down emulators
 
