@@ -178,11 +178,11 @@ openssl aes-256-cbc -d -a -in <INFILE>.openssl -out <OUTFILE>
 
 
 [](================================================================================================================)
-# <a name="_ssh_head_"></a>SSH
+# SSH
 ## Port forwarding from a remote server port to a local port
 ```
-# ssh <server> -L [bind_address:]<local port>:<host>:<remote port>
-ssh <server> -L 5005:localhost:4000
+# ssh -N -L [bind_address:]<local port>:<host>:<remote port> <server>
+ssh -N -L 5005:localhost:4000 some.ssh.server.com
 ```
 
 
@@ -239,7 +239,7 @@ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=n -jar 
 ```
 * [More info](http://stackoverflow.com/questions/975271/remote-debugging-a-java-application)
 
-[See SSH section](#_ssh_head_) for port forwarding from a remote server
+See SSH section for port forwarding from a remote server
 
 
 
