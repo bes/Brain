@@ -577,6 +577,23 @@ Tell Git not to guess, but rather insist that you set user.name and user.email e
 git config --global --add user.useConfigOnly true
 ```
 
+## Git push a specific commit to a specific branch
+
+If the branch exists
+
+```
+git push <remotename> <commit SHA>:<remotebranchname>
+```
+
+If the branch does not yet exist
+
+```
+git push <remotename> <commit SHA>:refs/heads/<remotebranchname>
+```
+
+[Source](https://stackoverflow.com/a/3230241/816017)
+
+
 ## Git worktree
 [Git worktree](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows)
 ```
