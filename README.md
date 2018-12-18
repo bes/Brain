@@ -278,6 +278,19 @@ df -i
 * [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
 
 
+## Spring (Boot) SYSK
+
+* https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/
+    * E.g. Jackson settings are explained under "Customize the Jackson ObjectMapper"
+* https://spring.io/blog/2013/05/11/content-negotiation-using-spring-mvc
+
+### Spring errors
+
+* `ErrorMvcAutoConfiguration` - Whitelabel error page configuration
+* `DefaultErrorAttributes` - this is (one of?) the place the map of error values are generated
+* `ErrorViewResolver` - implement this and install it as a Bean/Component to override the whitelabel error page.
+
+
 
 
 
