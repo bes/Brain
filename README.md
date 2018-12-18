@@ -1161,7 +1161,7 @@ Download [Miniconda from here](http://conda.pydata.org/miniconda.html), don't fo
 conda info -e
 
 #Create a new sandbox
-conda create -n my_sandbox python=3.5
+conda create -n my_sandbox python=3.6
 
 #Use the sandbox in this terminal
 source activate my_sandbox
