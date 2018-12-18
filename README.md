@@ -485,6 +485,11 @@ gcloud preview app deploy
 ## Kubernetes
 Install kubectl `gcloud components install kubectl`
 
+### Debug Java
+
+```
+-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=33777 -Dcom.sun.management.jmxremote.rmi.port=33777 -Djava.rmi.server.hostname=127.0.0.1 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+```
 
 
 
