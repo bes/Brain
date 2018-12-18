@@ -314,12 +314,16 @@ Or to show all containers
 * `-e`: supply environment variable
 * `-it`: interactive shell, if necessary
 * `--rm`: means temporary container, will be removed after exit
-* `-p`: map port from HOST:CONTAINER
+* `-p`: map port from `HOST:CONTAINER`
 * `-d`: Detach - Run container in background and print container ID
+* `-v`: Mount a directory in the container `HOST:CONTAINER`
+* `--network`: Specify the network, use `host` for running the container in the host network space.
+    * On mac the host can be connected to using DNS `docker.for.mac.localhost`
 
-```
-docker run -e SOME_ENV_VARIABLE='true' --rm -it -p 8080:8080 name/of/image:version
-```
+Examples
+* `docker run -it --network host --rm -v "$HOME/slask":/opt/slask ubuntu:17.10 bash`
+* `docker run -e SOME_ENV_VARIABLE='true' --rm -it -p 8080:8080 name/of/image:version`
+
 
 ## Remove orphaned / dangling volumes
 ```
