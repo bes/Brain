@@ -195,6 +195,12 @@ ssh -N -L 5005:localhost:4000 some.ssh.server.com
 [](================================================================================================================)
 # Golang
 
+## Install Using Homebrew
+
+```
+brew install go --cross-compile-common
+```
+
 ## GORE Go REPL
 
 [https://github.com/motemen/gore](Golang REPL)
