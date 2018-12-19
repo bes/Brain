@@ -8,6 +8,7 @@ Use this repository instead of your brain. Super helpful?
 # SSH
 
 ## configure multiple ssh keys for Github
+
 ```
 Host github1
    HostName     github.com
@@ -20,21 +21,25 @@ Host github2
 ```
 
 Then register additional ssh keys using ssh-add
+
 ```
 ssh-add -t 12h ~/.ssh/your_private_key
 ```
 
 List current keys using
+
 ```
 ssh-add -l
 ```
 
 The last step is to clone the git using the new virtual Host from the ssh config
+
 ```
 git clone git@github1:username/projectname.git
 ```
 
 ## Configure ssh through another ssh proxy (use with e.g. AWS)
+
 ```
 #The ssh proxy machine
 Host my-proxy-name
@@ -89,9 +94,11 @@ Now you can use `this.myExample` after rendering.
 
 
 [](================================================================================================================)
+
 # Webpack
 
 ## Hot reloading
+
 * [Webpack dev server](http://webpack.github.io/docs/webpack-dev-server.html)
 * [Geowarin guide to react + spring (with proxy) hot reloading](http://geowarin.github.io/spring-boot-and-react-hot.html)
 * [Node Proxy (options)](https://github.com/nodejitsu/node-http-proxy)
@@ -116,17 +123,25 @@ N.B: You may not output anything using console.log from your script when analyzi
 
 
 [](================================================================================================================)
+
 # GPG
+
 ## Encrypt to a specific person
+
 ### From clipboard
+
 #### Encrypt
+
 ```
 pbpaste | gpg -ear <recipient>
 ```
+
 #### Decrypt
+
 ```
 pbpaste | gpg -d
 ```
+
 ### From file
 
 #### Encrypt
@@ -142,11 +157,15 @@ gpg --output decrypted_file --decrypt encrypted_file.gpg
 ```
 
 ## Encrypt with a password
+
 ### Encrypt
+
 ```
 gpg --sign -c file.txt
 ```
+
 ### Decrypt
+
 ```
 gpg --output <file> -d <file>.gpg
 ```
@@ -156,20 +175,25 @@ gpg --output <file> -d <file>.gpg
 
 
 [](================================================================================================================)
+
 # OpenSSL
+
 * [Answer on stackoverflow](http://stackoverflow.com/questions/16056135/how-to-use-openssl-to-encrypt-decrypt-files)
 
 ## Encrypt with password
+
 ```
 openssl aes-256-cbc -a -salt -in <INFILE> -out <OUTFILE>.openssl
 ```
 
 ## Decrypt with password
+
 ```
 openssl aes-256-cbc -d -a -in <INFILE>.openssl -out <OUTFILE>
 ```
 
 ## Options
+
 * -a Means that the file (in/out) should be in Base64
 * -d Means decrypt
 
@@ -179,7 +203,9 @@ openssl aes-256-cbc -d -a -in <INFILE>.openssl -out <OUTFILE>
 
 [](================================================================================================================)
 # SSH
+
 ## Port forwarding from a remote server port to a local port
+
 ```
 # ssh -N -L [bind_address:]<local port>:<host>:<remote port> <server>
 ssh -N -L 5005:localhost:4000 some.ssh.server.com
@@ -203,7 +229,7 @@ brew install go --cross-compile-common
 
 ## GORE Go REPL
 
-[https://github.com/motemen/gore](Golang REPL)
+[Golang REPL](https://github.com/motemen/gore)
 
 A good use of gore might be to get current epoch nanos
 
@@ -231,6 +257,7 @@ time.Now().UnixNano()
 Use [VisualVM](https://visualvm.github.io/)
 
 ## Stack traces of running java process
+
 ```
 pkill -3 java
 ```
@@ -240,9 +267,11 @@ Stacktrace will end up in `/var/log/<some name>.log`
 Use `top` and press Shift+H to see thread PIDs, convert them to 0xHex and check against the log.
 
 ## Start an instance with debugging
+
 ```
 java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=n -jar <myapp>.jar
 ```
+
 * [More info](http://stackoverflow.com/questions/975271/remote-debugging-a-java-application)
 
 See SSH section for port forwarding from a remote server
@@ -259,9 +288,11 @@ Crontab for removing old sessions (if your inode count goes through the roof, an
 ```
 0 5  *   *   *     find /var/lib/php5 -name "sess_*" -cmin +24 | xargs rm
 ```
+
 [Here's a post on stackoverflow for finding the place with the most files](http://stackoverflow.com/questions/653096/howto-free-inode-usage) if you run out of inodes.
 
 Check your inode count using
+
 ```
 df -i
 ```
@@ -272,7 +303,9 @@ df -i
 
 
 [](================================================================================================================)
+
 # Spring (Boot)
+
 * [Reference](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 * [API docs](http://docs.spring.io/spring-boot/docs/current/api/)
 * [Spring boot with Docker](https://spring.io/guides/gs/spring-boot-docker/)
@@ -311,6 +344,7 @@ Or to show all containers
 `docker ps -a`
 
 ## Run a container
+
 * `-e`: supply environment variable
 * `-it`: interactive shell, if necessary
 * `--rm`: means temporary container, will be removed after exit
@@ -321,16 +355,22 @@ Or to show all containers
     * On mac the host can be connected to using DNS `docker.for.mac.localhost`
 
 Examples
+
 * `docker run -it --network host --rm -v "$HOME/slask":/opt/slask ubuntu:17.10 bash`
 * `docker run -e SOME_ENV_VARIABLE='true' --rm -it -p 8080:8080 name/of/image:version`
 
 
 ## Remove orphaned / dangling volumes
-```
+
 ### List them
+
+```
 docker volume ls -qf dangling=true
+```
 
 ### Remove them
+
+```
 docker volume rm $(docker volume ls -qf dangling=true)
 ```
 
@@ -343,6 +383,7 @@ An app for managing Docker images locally: [Simple Docker UI](https://github.com
 
 
 [](================================================================================================================)
+
 # Google
 
 ## Google Sign In
@@ -356,22 +397,29 @@ An app for managing Docker images locally: [Simple Docker UI](https://github.com
 [](================================================================================================================)
 # Amazon Web Services
 ## Install AWS CLI
-```brew install awscli```
+
+```
+brew install awscli
+```
 
 [Then configure it (AWS CLI Getting Started)](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
 
 ## Selecting which user should be used by AWS CLI
+
 ```
 export AWS_DEFAULT_PROFILE=user2
 ```
 
 ## DynamoDB
+
 [Tutorial](http://docs.aws.amazon.com/amazondynamodb/latest/gettingstartedguide/Welcome.html)
 
 ### Run local DynamoDB
+
 ```java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb```
 
 ## application.yml
+
 ```
 amazon:
   #The live server location, if you want to run against it
@@ -391,10 +439,13 @@ logging:
 
 [](================================================================================================================)
 # JSON
+
 ## Pretty print JSON
+
 pbpaste works by default on OSX, can work on linux if you define it.
 
 ### Using underscore
+
 * [Underscore-cli GitHub](https://github.com/ddopson/underscore-cli)
 
 A CLI for parsing JSON data into component parts, usable by your shell.
@@ -404,6 +455,7 @@ pbpaste | underscore print --color | less
 ```
 
 ### Using python
+
 ```
 pbpaste | python -m json.tool | less
 ```
@@ -438,11 +490,13 @@ project.findProperty("myPropertyName")
 Then in IDEA create a "Remote" configuration on port 5005 and press debug.
 
 ## Force an update of dependencies
+
 ```
 ./gradlew --refresh-dependencies dependencies
 ```
 
 ## Create wrapper
+
 ```
 gradle wrapper --gradle-version 3.1
 ```
@@ -459,6 +513,7 @@ org.gradle.daemon=true
 in `~/.gradle/gradle.properties`
 
 ## Incredible gradle documents
+
 [Discovering Gradle build scripts from classpath](http://jdpgrailsdev.github.io/blog/2014/07/22/gradle_build_scripts_classpath.html) (embed gradle scripts in gradle plugin)
 [Distribute Custom Gradle (wrapper with scripts?)](http://mrhaki.blogspot.se/2012/10/gradle-goodness-distribute-custom.html)
 [Provided scope in gradle](https://sinking.in/blog/provided-scope-in-gradle/), use provided scope without dependencies ending up in the distribution)
@@ -473,16 +528,19 @@ in `~/.gradle/gradle.properties`
 [Installation instructions](https://cloud.google.com/sdk/downloads)
 
 Installing on OSX
+
 ```
 curl https://sdk.cloud.google.com | bash
 ```
 
 Using a preview command
+
 ```
 gcloud preview app deploy
 ```
 
 ## Kubernetes
+
 Install kubectl `gcloud components install kubectl`
 
 ### Debug Java
@@ -498,7 +556,9 @@ Install kubectl `gcloud components install kubectl`
 
 [](================================================================================================================)
 # Shells
+
 Restart shell
+
 ```
 exec -l $SHELL
 ```
@@ -552,6 +612,7 @@ Less commands
 
 [](================================================================================================================)
 # Snippets
+
 List all changed git files and remove the first line of each file if the first line is a newline
 
 ```
@@ -571,6 +632,7 @@ git ls-files --modified | gxargs gsed -i '1{/^$/d}'
 [My self-answered stackoverflow/superuser question](http://superuser.com/questions/987132/zsh-git-tab-autocomplete-not-working-if-head-is-next-to-last-word-on-input)
 
 ## Enable / disable function tracing
+
 ```
 setopt xtrace
 my_func
@@ -578,6 +640,7 @@ unsetopt xtrace
 ```
 
 It's also possible to use (and combined with xtrace):
+
 ```
 setopt verbose
 my_func
@@ -585,9 +648,11 @@ unsetopt verbose
 ```
 
 ## Predefined zsh functions
+
 * OSX: `/usr/local/share/zsh/functions`
 
 ## oh-my-zsh plugins
+
 `~/.oh-my-zsh/plugins`
 
 
@@ -601,6 +666,7 @@ unsetopt verbose
 ## Git configuration
 
 Tell Git not to guess, but rather insist that you set user.name and user.email explicitly before it will let you commit:
+
 ```
 git config --global --add user.useConfigOnly true
 ```
@@ -623,36 +689,43 @@ git push <remotename> <commit SHA>:refs/heads/<remotebranchname>
 
 
 ## Git worktree
+
 [Git worktree](https://github.com/blog/2042-git-2-5-including-multiple-worktrees-and-triangular-workflows)
+
 ```
 git worktree add -b hotfix ../hotfix origin/master
 ```
 
 When you are done with a linked working tree you can simply delete it
+
 ```
 rm -rf ../hotfix
 ```
 
 Administrative files will get gc'd, but you can do that manually too:
+
 ```
 git worktree prune
 ```
 
 ## Cleaning up
+
 ```
 git remote prune origin
 # Warning will remove all 'newly created' branches as well (removes all fully merged branches from the current branch's perspective)
 git branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
-
 ```
+
 [See stackoverflow](http://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged)
 
 ## List changes
+
 ```
 git log --oneline --graph origin/master..HEAD
 ```
 
 ## Tag a version
+
 ```
 git tag -a <tagname> [<commit>]
 git push <remote> --tags
@@ -664,22 +737,24 @@ git push <remote> HEAD:refs/for/branch-name
 ```
 
 ## List all local branches with tracking information
+
 ```
 git branch -lvv
 ```
 
 ## Find a changed row
+
 ```
 git log --patch | grep -E "(commit ([0-9]|[a-fA-F])+|((\+|\-).+(returnData)))" | less
 ```
 
 In a specific file
+
 ```
 git log --patch ./path/to/File.java | grep -E "(commit ([0-9]|[a-fA-F])+|((\+|\-).+(returnData)))" | less
 ```
 
 ## Find a patch that contains specific words
-
 
 ```
 git log -Gregex
@@ -693,13 +768,17 @@ git log -Sword -p
 ```
 
 [See answer on stack overflow](http://stackoverflow.com/questions/1337320/how-to-grep-git-commits-for-a-certain-word)
+
 * [Read this for elaboration on subtleties](http://stackoverflow.com/questions/1337320/how-to-grep-git-commit-diffs-or-contents-for-a-certain-word/1340245#1340245)
+
 ## Create a topic branch from a remote branch with tracking
+
 ```
 git branch --track topic_branch_name origin/rel-7.2.A.0
 ```
 
 ## Add tracking information to an existing branch
+
 ```
 git branch -u upstream/foo
 ```
@@ -707,22 +786,26 @@ git branch -u upstream/foo
 ## Git subtree
 [Copied from this article](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
 First add a remote
+
 ```
 git remote add -f <remote name> <git path>
 ```
 
 Then add the subtree
+
 ```
 git subtree add --prefix <new path of subtree> <remote> master --squash
 ```
 
 Update the subtree later
+
 ```
 git fetch <remote> master
 git subtree pull --prefix <path of subtree> <remote> master --squash
 ```
 
 Contribute to upstream
+
 ```
 git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 ```
@@ -735,6 +818,7 @@ git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 # SQL
 
 ## macOS
+
 * DB Browser for SQLite
 * Sequel Pro
 
@@ -745,6 +829,7 @@ git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 
 [](================================================================================================================)
 # StackOverflow
+
 * [Favorites](http://stackexchange.com/users/431745/erik-z?tab=favorites)
 
 
@@ -754,7 +839,9 @@ git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 
 [](================================================================================================================)
 # Atom Editor
+
 ## Essential packages
+
 * https://atom.io/packages/ctrl-last-tab
 * https://atom.io/packages/merge-conflicts
 
@@ -764,42 +851,54 @@ git subtree push --prefix=<path of subtree> <remote> <TARGET-BRANCH>
 
 [](================================================================================================================)
 # C(++)
+
 ## GLFW
+
 You need to install CMake first! Instruction for Linux/OSX:
+
 * [Clone GLFW from GitHub](https://github.com/glfw/glfw)
 * `cmake .`
 * `make install`
+
 Now you can `#include <GLFW/glfw3.h>`
 
 #ImGui
+
 Framework for menus / windows in OpenGL (e.g. using GLFW)
+
 * [Clone ImGui from GitHub](https://github.com/ocornut/imgui)
 d
 
 
 [](================================================================================================================)
 # IntelliJ
+
 ## Enable Annotation processing in IntelliJ
+
 * Build, Execution, Deployment > Compiler > Annotation Processors > Enable annotation processing
 * Plugins > Browse repositories > Lombok
 * Add @ComponentScan annotation to your @SpringBootApplication, otherwise @Autowired can't be found by IntelliJ (?)
 
 # GPG
+
 * [GPG Mini Howto](http://www.dewinter.com/gnupg_howto/english/GPGMiniHowto-3.html)
 * [What default algorithm to use (See top answer)]( http://superuser.com/questions/541090/best-encryption-and-signing-algorithm-for-gnupg-rsa-rsa-or-dsa-elgamal) I use RSA / RSA.
 
 # Logging
 ## Cleaner log using sed
+
 ```
 adb logcat | grep SomeTerm | sed -e 's/\/SomeOtherTerm[(].....[)]//'
 ```
 
 ## Redirect std out & std err to /dev/null
+
 ```
 command > /dev/null 2>&1
 ```
 
 ## Redirecting std out & std err to two different files and seeing the output at the same time
+
 ```
 command > >(tee ~/Desktop/buildlog/stdout.log) 2> >(tee ~/Desktop/buildlog/stderr.log >&2)
 ```
@@ -810,7 +909,9 @@ command > >(tee ~/Desktop/buildlog/stdout.log) 2> >(tee ~/Desktop/buildlog/stder
 
 [](================================================================================================================)
 # Android
+
 ## Flashing CM
+
 * Find model files, download recovery & CM SW
 * Go to device Wiki & follow instructions
 
@@ -831,6 +932,7 @@ cd /data/data/com.your.pacakagename/
 ## Android annotation processing
 
 Use Lombok + Android APT
+
 * [Lombok](https://projectlombok.org/setup/android.html)
 * [Android-apt](https://bitbucket.org/hvisser/android-apt)
 
@@ -842,30 +944,37 @@ Check for resources inside APK
 ## Android System / Apps
 
 ### get package name / apk location
+
 ```
 adb shell pm list packages -f
 ```
 
 ### get apk Manifest main info
+
 ```
 aapt d badging <APK>
 ```
 
 ### Monkey
+
 ```
 adb shell monkey -s 20120614 -v -p com.package.name -p com.package2.name --pct-touch 20 --pct-motion 60 --pct-majornav 15 --pct-appswitch 5 --throttle 300 1000000 | tee log.txt
 ```
 
 ### Systrace
+
 ```
 ~/sdk/android-curr/platform-tools/systrace/systrace.py --app=com.package.name gfx input view wm am hal res dalvik sched freq idle load
 ```
 
 ### Memory usage for a process
+
 ```
 $ adb shell dumpsys meminfo com.package.name
 ```
+
 or
+
 ```
 adb shell procrank | grep home
 ```
@@ -877,12 +986,15 @@ adb shell procrank | grep home
 
 ## Force backup of a specific package (for testing)
 Result of operation (e.g. encrypted content) is output to FD 0 (stdout) = shown in terminal.
+
 ```
 $ adb shell bu 0 backup <package name>
 ```
+
 More options are available in `frameworks/base/cmds/bu/src/com/android/commands/bu/Backup.java`
 
 ### tcpdump
+
 ```
 $ tcpdump -i <interface> -s 65535 -w <some-file>
 $ tcpdump -i any -p -s 0 -w /sdcard/capture.pcap
@@ -896,12 +1008,15 @@ $ tcpdump -i any -p -s 0 -w /sdcard/capture.pcap
 * [Tcpdump build guide](https://bes.github.io/guide/2016/10/12/android-tcpdump.html)
 
 Only for loopback:
+
 ```
 $ adb shell "tcpdump -i lo  -vv -s 0 -w /sdcard/tcpoutput.pcap"
 ```
 
 ## Android Screens and resolution
+
 DPI Scale factors
+
 * LDPI = 0.75
 * MDPI = 1
 * TVDPI = 1.33
@@ -910,20 +1025,26 @@ DPI Scale factors
 * XXHDPI = 3
 
 ### System Screen Density
+
 #### Density
+
 `$ adb shell getprop ro.sf.lcd_density`
 
 #### Screen width
+
 `$ adb shell dumpsys window | grep DisplayWidth`
 
 #### Simulate screen density and resolution
+
 Ex. HVGA
+
 ```
 $ adb shell wm size 320x480
 $ adb shell wm density 160
 ```
 
 Ex. Tablet
+
 ```
 $ adb shell wm size 1080x1920
 $ adb shell wm density 240
@@ -932,6 +1053,7 @@ $ adb shell wm density 240
 Tip: kill com.android.systemui from DDMS to force it to load the correct resources.
 
 ## SQLite extra logging
+
 ```
 $ adb shell setprop log.tag.SQLiteLog V
 $ adb shell setprop log.tag.SQLiteStatements V
@@ -940,9 +1062,11 @@ $ adb shell start
 ```
 
 ## Device emulator with latency/delay
+
 ```
 emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 ```
+
 * [Android: Emulator](http://developer.android.com/tools/help/emulator.html)
 * [Android: Emulator Netdelay](http://developer.android.com/tools/devices/emulator.html#netdelay)
 * [Android: Emulator Netspeed](http://developer.android.com/tools/devices/emulator.html#netspeed)
@@ -982,6 +1106,7 @@ RANDOM_STRING=$(env LC_CTYPE=C tr -dc 'a-zA-Z0-9' < /dev/urandom | fold -w 64 | 
 ```
 
 ## Make a random big file
+
 ### Linux
 
 Poll status of running dd, (status will be printed in the terminal running dd).
@@ -995,6 +1120,7 @@ sudo kill -USR1 `pidof dd`
 
 ### macOS
 
+
 ```
 sudo dd if=/dev/urandom of=./bigfile bs=1m count=458000
 #check status
@@ -1002,11 +1128,13 @@ sudo kill -INFO `pidof dd`
 ```
 
 ## Loop over a number of files and execute a command for each one
+
 ```
 for f in $(find -name "*.apk"); do adb install -r $f; done
 ```
 
 ## Remove CRLF at the end of lines in a file
+
 Use dos2unix command in ubuntu
 
 ## List all open files and the program that is keeping the file open
@@ -1041,6 +1169,7 @@ Use the [memusg](https://gist.github.com/netj/526585) script, as explained
 
 [](================================================================================================================)
 # Jekyll
+
 ```
 # While developing
 jekyll serve
@@ -1054,6 +1183,7 @@ jekyll build
 
 [](================================================================================================================)
 # Environments (rbenv, jenv...)
+
 * [rbenv](https://github.com/rbenv/rbenv)
 * [jenv](http://www.jenv.be/)
 
@@ -1156,6 +1286,7 @@ Delete from Organizer
 Download [Miniconda from here](http://conda.pydata.org/miniconda.html), don't forget to add conda to your PATH.
 
 ## Use Conda
+
 ```bash
 #Check which sandboxes you already have
 conda info -e
@@ -1174,6 +1305,7 @@ source deactivate
 ```
 
 ## Use iPython
+
 ```python
 $ ipython
 from webmonkey import monkey
@@ -1205,6 +1337,7 @@ console.log(util.inspect(myObject, {showHidden: false, depth: null}))
 Or just use `console.log` or `console.dir` which use it implicitly.
 
 ### NVM
+
 * [NVM on Github](https://github.com/creationix/nvm)
 
 Example: Node 7.10 and NPM 5.0.1
@@ -1217,10 +1350,12 @@ npm install -g npm@5.0.1
 
 
 ### packages
+
 * [ncu - npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
 
 ## Prepare a canvas for HiDPI use
+
 ```
 pixelRatio(canvas) {
   var ctx = canvas.getContext("2d"),
@@ -1245,15 +1380,19 @@ prepareCanvas(canvas, width, height) {
 ```
 
 
-
 [](================================================================================================================)
 # Virtual machine using Vagrant & VirtualBox
+
 [Vagrant](https://www.vagrantup.com/) is an easy way to set up virtual machines. Don't forget to install [VirtualBox](https://www.virtualbox.org/).
+
 ## Vagrantfile example
-Place [this file](vagrant/Vagrantfile) in ~/vagrant/Vagrantfile
+
+Place [this file](vagrant/Vagrantfile) in `~/vagrant/Vagrantfile`
 
 ## Vagrant up
+
 To start the machine in go to the directory with the Vagrantfile and do
+
 ```
 vagrant up
 ```
@@ -1430,7 +1569,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 * [Finderpath](https://bahoom.com/finderpath/) (Command+G path in finder)
 
 ### Optional
-* [TLDR man pages](brew tap tldr-pages/tldr && brew install tldr)
+* TLDR man pages: `brew tap tldr-pages/tldr && brew install tldr`
 * [XnViewMP](http://www.xnview.com/) image viewer / editor
 * [CyberDuck FTP Client](https://cyberduck.io/)
 * Soundflower advanced sound input/output adjustment [This fork seems best right now](https://github
@@ -1508,48 +1647,62 @@ Install with brew install <name>
 * zsh
 
 ## Git for OSX
+
 Install:
+
 ```
 brew install git
 ```
 
 Or if you want to use git with git-extras you should probably use
+
 ```
 brew install git --without-completions
 ```
 
 ### git-extras
+
 * [Command listing](https://github.com/tj/git-extras/blob/master/Commands.md)
 
-According to README.md in ~/.oh-my-zsh/plugins/git-extras:
+According to README.md in `~/.oh-my-zsh/plugins/git-extras`:
+
 On OS X with Homebrew, you need to install `git` with `brew install git --without-completions`. Otherwise, `git`'s `_git` will take precedence, and you won't see the completions for `git-extras` commands.
 
 Then install git-extras itself via `brew install git-extras`
 
 ## Monitor network / bandwidth with bmon
+
 ```
 brew install bmon
 ```
 
 ## Stay sane
+
 * [Re-map Command/Option key on Windows USB keyboard) (Instead of losing your mind)](http://superuser.com/questions/80976/how-to-re-map-command-and-option-keys-on-mac-os-x-with-a-pc-keyboard)
 * [Word/Line deletion in iTerm2](https://coderwall.com/p/ds2dha/word-line-deletion-and-navigation-shortcuts-in-iterm2)
 
 ## Workarounds
+
 ### IntelliJ can't find git executable for use in exec()
+
 If you installed git from git-scm.org according to the instructions, you need to symlink /usr/bin/git to /usr/local/git/bin/git otherwise intellij can't find git in exec().
 
 ## Potentially useful
+
 * [JEnv](http://www.jenv.be/) Set Java Home, locally for a given path if you want.
 
 ## Launch an app from terminal
+
 Example with Atlassian SourceTree
+
 ```
 open -a SourceTree <path/to/repository>
 ```
 
 ## Launch an OSX app from terminal with logs from that app
+
 Example: QuickTime Player
+
 ```
 cd /Applications/QuickTime Player.app/Contents/MacOS%
 ./QuickTime\ Player
@@ -1575,6 +1728,7 @@ lsof
 [Source](https://www.backblaze.com/blog/securely-erase-mac-ssd/)
 
 ## Somewhat updated list of brew packages (brew list)
+
 `% brew list`
 
 ```
@@ -1616,11 +1770,13 @@ fribidi     libass      mplayer     sdl     zsh
 
 
 [](================================================================================================================)
+
 # Linux
 
 ## Sudoers
 
 This command edits the sudoers file:
+
 ```
 sudo visudo
 ```
@@ -1628,12 +1784,15 @@ sudo visudo
 Here is an [explanation on askubuntu](http://askubuntu.com/a/443071).
 
 Another way of doing it is adding only your own user as a sudoer:
+
 ```
 myusername     ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 
 ## Java alternatives
+
 Used to select what java versions are used, on Ubuntu Linux (probably other dists as well)
+
 ```
 $ sudo update-alternatives --config java
 $ sudo update-alternatives --config javac
@@ -1642,9 +1801,11 @@ $ update-java-alternatives -l
 ```
 
 ## Gnome 3
+
 Gnome HiDPI info on [Archlinux wiki](https://wiki.archlinux.org/index.php/HiDPI#GNOME).
 
 Basically you first scale up to 2x2 (X only supports integer scaling, Wayland probably will handle floats):
+
 ```
 gsettings set org.gnome.desktop.interface scaling-factor 2
 # There is a UI setting for this in Gnome, but I didn't feel it went "all the way":
@@ -1652,6 +1813,7 @@ Gnome Tweak Tool -> Windows -> HiDPI -> Window scaling = 2
 ```
 
 Now you can "Zoom Out":
+
 ```
 # Fetch display name
 xrandr | grep -v disconnected | grep connected | cut -d' ' -f1
@@ -1672,6 +1834,7 @@ iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o <DEVICE e.g. eth0 but probably 
 ```
 
 And clear the rule when done
+
 ```
 sudo iptables -t nat -F
 ```
@@ -1681,16 +1844,19 @@ sudo iptables -t nat -F
 Update local `name.ovpn` file with the current correct external IP of the VPN server.
 
 "server" in the command is the name of the configuration file
+
 ```
 sudo systemctl start openvpn@server
 ```
 
 Restart
+
 ```
 sudo systemctl restart openvpn@server
 ```
 
 ### Configure ASUS router
+
 * [VPN Config](https://support.hidemyass.com/hc/en-us/articles/204449557-Asus-VPN-Client-Setup-Original-firmware-)
 
 
@@ -1701,6 +1867,7 @@ sudo systemctl restart openvpn@server
 * [Connect to a VPN using the command line and an ovpn file](http://superuser.com/questions/561816/using-openvpn-from-mac-osx-terminal-cannot-load-tun-tap)
 
 ## Ubuntu 12.04
+
 * VirtualBox
  * [Latest VirtualBox as package on Ubuntu 12.04](http://linuxg.net/how-to-install-virtualbox-4-3-on-ubuntu-13-04-12-10-12-04-linux-mint-15-14-13-pear-os-8-pear-os-7-and-elementary-os-0-2-via-the-official-virtualbox-repository/)
  * Resize virtualbox
@@ -1749,7 +1916,10 @@ Then, inside windows: extend partition.
 
 
 [](================================================================================================================)
+
 # Quotes
+
 ## Collection of development related lol-quotes
+
 * ["GCD and dispatch_queue_t are still a masterpiece and the API works great in Swift"](https://www.mikeash.com/pyblog/friday-qa-2015-02-06-locks-thread-safety-and-swift.html)
 * ["Do you ever have the feeling that computer architectures come and go, but CA:AQA is forever?"](https://www.goodreads.com/review/show/1253988725?book_show_action=true)
