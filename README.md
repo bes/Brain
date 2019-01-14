@@ -501,16 +501,44 @@ Then in IDEA create a "Remote" configuration on port 5005 and press debug.
 gradle wrapper --gradle-version 3.1
 ```
 
-## Enable gradle daemon
-[Docs](https://docs.gradle.org/2.6/userguide/gradle_daemon.html)
+## Gradle properties
 
-Put
+The following options can be put in a `gradle.properties` file in the root of your Gradle project.
 
 ```
+# Enable gradle daemon
 org.gradle.daemon=true
+
+# Enable caching
+org.gradle.caching=true
+
+# Set JVM args, e.g. increase heap or set OOM flags
+org.gradle.jvmargs=-Xmx4096m -XX:MaxMetaspaceSize=1024m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/Users/bes/slask/heapdump
 ```
 
-in `~/.gradle/gradle.properties`
+## Test heap
+
+Configure the test heap
+
+```
+allprojects { project ->
+    project.plugins.withId('java') {
+        // Only for tests
+        test {
+            maxHeapSize = "1536M"
+            jvmArgs "-XX:MaxMetaspaceSize=512m"
+        }
+    }
+    project.plugins.withId('java-library') {
+        // Only for tests
+        test {
+            maxHeapSize = "1536M"
+            jvmArgs "-XX:MaxMetaspaceSize=512m"
+        }
+    }
+}
+```
+
 
 ## Incredible gradle documents
 
