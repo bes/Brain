@@ -641,7 +641,7 @@ Less commands
 [](================================================================================================================)
 # Snippets
 
-List all changed git files and remove the first line of each file if the first line is a newline
+## List all changed git files and remove the first line of each file if the first line is a newline
 
 ```
 git ls-files --modified | gxargs gsed -i '1{/^$/d}'
@@ -649,7 +649,19 @@ git ls-files --modified | gxargs gsed -i '1{/^$/d}'
 
 * http://stackoverflow.com/questions/11226938/delete-first-line-of-file-if-its-empty
 
+## List directories of that are about 1 GB or larger in size
 
+```
+du -h -d1 | ggrep -E "[0-9]+\.?[0-9]*G"
+```
+
+## List the 5 largest files in all subdirectories
+
+(macOS, or linux without g prefix)
+
+```
+gfind -type f -exec gdu -Sh {} + | gsort -rh | head -n 5
+```
 
 
 
