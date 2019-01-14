@@ -1685,6 +1685,9 @@ Install with brew install <name>
 * unrar
 * wget
 * zsh
+* OpenJDK
+    * `brew tap AdoptOpenJDK/openjdk` then `brew cask install adoptopenjdk11`
+    * [AdoptOpenJDK](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 
 ## Git for OSX
 
