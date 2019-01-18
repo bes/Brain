@@ -1118,6 +1118,12 @@ emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 [](================================================================================================================)
 # Unix Common
 
+## Find files while excluding directories
+
+```
+gfind . -path ./excludeA -prune -o -path ./excludeB -prune -o -name "*.ts*"
+```
+
 ## Make sudo password entry visible character-by-character
 
 ```
