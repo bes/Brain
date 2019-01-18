@@ -1578,7 +1578,6 @@ MacOS X (on mid 2014 rMBP) has pretty bad performance on an external 4k display.
 ## Tweaks
 * [Global shortcut for dark/light mode](http://www.tekrevue.com/tip/os-x-yosemite-dark-mode-shortcut/) Control+Option+Command+T.
 * [iTerm jump and end of line](http://stackoverflow.com/questions/6205157/iterm2-how-to-get-jump-to-beginning-end-of-line-in-bash-shell)
-* [Launch sumblime text from terminal](https://gist.github.com/artero/1236170 launch sublime from terminal)
 
 
 ### Copy public key
