@@ -1634,6 +1634,26 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 ## Brew / Homebrew
 
+### Create a brew bundle
+
+First install brew bundle by simply writing `brew bundle` in the terminal, which is also the command for
+installing everything in the bundle file in the current directory.
+
+Create a [Homebrew bundle](https://github.com/Homebrew/homebrew-bundle) in the form of a `Brewfile`,
+which declares all taps and packages that you have installed.
+
+Create  a `Brewfile` from scratch in the current directory:
+
+```
+brew bundle dump --file ./Brewfile --force
+```
+
+To uninstall all Homebrew formulae not listed in Brewfile:
+
+```
+brew bundle cleanup
+```
+
 ### List packages
 ```
 brew list
