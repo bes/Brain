@@ -1632,6 +1632,10 @@ pbcopy < ~/.ssh/id_rsa.pub
 
 [Lifehacker essential mac list](http://lifehacker.com/lifehacker-pack-for-mac-our-list-of-the-essential-mac-635303836)
 
+## SDKMAN!
+
+SDK Manager for Java based languages [https://sdkman.io/](https://sdkman.io/).
+
 ## Brew / Homebrew
 
 ### Create a brew bundle
