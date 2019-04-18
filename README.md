@@ -1262,21 +1262,17 @@ xcrun simctl list devices
 xcrun simctl list devices | grep Booted
 ```
 
-## Directory of an emulator
+## XCode Cleanup
+
+* Archives - Delete from Organizer
+* Simulators - Delete from XCode then `xcrun simctl delete unavailable`
+* Device debug symbols - Delete unwanted from `~/Library/Developer/Xcode/iOS DeviceSupport/`
+
+## Directory of a simulator
 
 ```
 ~/Library/Developer/CoreSimulator/Devices/<DEVICE_ID_FROM_SIMCTL>/
 ```
-
-## Directory for iOS Device Support
-
-```
-~/Library/Developer/Xcode/iOS DeviceSupport/
-```
-
-## Archives
-
-Delete from Organizer
 
 ## Concurrency
 [GCD tutorial @ raywenderlich](http://www.raywenderlich.com/79149/grand-central-dispatch-tutorial-swift-part-1)
