@@ -252,6 +252,13 @@ time.Now().UnixNano()
 [](================================================================================================================)
 # Java
 
+## macOS installation alternatives
+
+* Homebrew: `brew cask install adoptopenjdk11`
+* SDKMAN!
+    * List: `sdk list java`
+    * Install: `sdk install java 13.0.1.hs-adpt`
+
 ## Measure Heap space graphically
 
 Use [VisualVM](https://visualvm.github.io/)
