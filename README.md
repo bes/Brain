@@ -218,6 +218,38 @@ ssh -N -L 5005:localhost:4000 some.ssh.server.com
 
 
 
+
+
+
+
+[](================================================================================================================)
+# Rust
+
+Zsh autocompletion and other things are setup in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc).
+
+## Cargo
+
+List installed applications
+
+```
+cargo install --list
+```
+
+### cargo sweep
+
+See `rustclean` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc) for usage.
+
+### cargo-update
+
+See `rustcargoupdate` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc) for usage.
+
+
+
+
+
+
+
+
 [](================================================================================================================)
 # Golang
 
