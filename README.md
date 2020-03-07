@@ -1585,7 +1585,7 @@ Basically:
     * File > New > Application option
     * Drag the "Run Shell Script" action into the main window
     * Paste this `HOME=$HOME/.dropbox2 /Applications/Dropbox.app/Contents/MacOS/Dropbox &>/dev/null &`
-    * When the disk is attached, run the program - When the disk is attached, close Dropbox2 (exit the second dropbox instance).
+    * When the disk is attached, run the program - Before the disk is detached, close Dropbox2 (exit the second dropbox instance).
 
 ## Check what is preventing your computer from going to sleep
 
