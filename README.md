@@ -227,6 +227,14 @@ ssh -N -L 5005:localhost:4000 some.ssh.server.com
 
 Zsh autocompletion and other things are setup in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc).
 
+## Rustup
+
+* `rustup update`
+* `rustup show`
+* `rustup toolchain list`
+* `rustup default nightly`
+* `rustup default stable`
+
 ## Cargo
 
 List installed applications
@@ -243,6 +251,10 @@ See `rustclean` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh
 
 See `rustcargoupdate` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc) for usage.
 
+
+## Resources
+
+* [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/README.html)
 
 
 
