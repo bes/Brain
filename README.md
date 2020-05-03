@@ -74,18 +74,10 @@ Host <some-other-host-trivial-name>
 [](================================================================================================================)
 # React
 
-## Ref (getElementById React Style)
+## Guides
 
-```
-<div ref={node => { this.myExample = node }}">
-```
+* [Pass props to children](https://frontarm.com/james-k-nelson/passing-data-props-children/)
 
-Now you can use `this.myExample` after rendering.
-
-## React Bootstrap
-
-* https://github.com/react-bootstrap/react-bootstrap
-* http://react-bootstrap.github.io/
 
 
 
