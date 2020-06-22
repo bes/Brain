@@ -1171,9 +1171,33 @@ emulator -avd <some avd> -netdelay 400:1200 -netspeed gsm
 
 ## Find files while excluding directories
 
+Note from the manual:
 ```
-gfind . -path ./excludeA -prune -o -path ./excludeB -prune -o -name "*.ts*"
+  Operators
+        Operators join together the other items within the expression.
+        They include for example -o (meaning logical OR)
+        and -a (meaning logical AND).
+        Where an operator is missing, -a is assumed.
 ```
+
+```
+gfind . -type d \
+  \( \
+    -path ./node_modules \
+    -o -path ./.git \
+  \) \
+  -prune \
+  -o -type f -name "*.ts*" -print | gxargs wc -l
+```
+
+So logically this means
+
+- Find from `.` all -type d
+  - And from that list if the path is
+    - node_modiles
+    - OR .git
+  - Then -prune the list of those directories
+- After pruning
 
 ## Make sudo password entry visible character-by-character
 
