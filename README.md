@@ -1594,6 +1594,12 @@ Set the screenshot directory
 defaults write com.apple.screencapture location /Users/myuser/some/path
 ```
 
+Turn off charging hardware chime
+```
+defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
+killall PowerChime
+```
+
 ## Kernel modules extensions (.kext)
 
 Kernel modules can be located in these locations
