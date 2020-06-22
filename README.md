@@ -74,18 +74,10 @@ Host <some-other-host-trivial-name>
 [](================================================================================================================)
 # React
 
-## Ref (getElementById React Style)
+## Guides
 
-```
-<div ref={node => { this.myExample = node }}">
-```
+* [Pass props to children](https://frontarm.com/james-k-nelson/passing-data-props-children/)
 
-Now you can use `this.myExample` after rendering.
-
-## React Bootstrap
-
-* https://github.com/react-bootstrap/react-bootstrap
-* http://react-bootstrap.github.io/
 
 
 
@@ -2084,3 +2076,16 @@ Then, inside windows: extend partition.
 
 * ["GCD and dispatch_queue_t are still a masterpiece and the API works great in Swift"](https://www.mikeash.com/pyblog/friday-qa-2015-02-06-locks-thread-safety-and-swift.html)
 * ["Do you ever have the feeling that computer architectures come and go, but CA:AQA is forever?"](https://www.goodreads.com/review/show/1253988725?book_show_action=true)
+
+
+
+
+
+[](================================================================================================================)
+
+# Incomplete list of nice blog posts and such
+
+* [Cryptopals: Learn stuff about crypto by doing excercises](https://cryptopals.com/)
+* [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)
+* [Kill Math: Intuition guided math solving](http://worrydream.com/KillMath/)
+* [Azeria ARM (exploitation) tutorials](https://azeria-labs.com/writing-arm-assembly-part-1/)
