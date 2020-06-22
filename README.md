@@ -1376,9 +1376,21 @@ xcrun simctl list devices | grep Booted
 
 [Dive Into Python 3](http://www.diveintopython3.net/)
 
-Download [Miniconda from here](http://conda.pydata.org/miniconda.html), don't forget to add conda to your PATH.
 
-## Use Conda
+
+## Miniconda
+
+### Install
+
+```
+brew cask install miniconda
+```
+
+### Aliases
+
+I have put a custom conda plugin in .oh-my-zsh
+
+### Other stuff
 
 ```bash
 #Check which sandboxes you already have
