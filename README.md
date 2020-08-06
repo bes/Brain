@@ -2083,9 +2083,17 @@ Then, inside windows: extend partition.
 
 [](================================================================================================================)
 
+# Unread blog post pipeline
+
+* [Blue team rust](https://tiemoko.com/blog/blue-team-rust/)
+* [Code and bitters](https://codeandbitters.com/)
+* [Lifetime variance](https://github.com/sunshowers/lifetime-variance-example)
+* [AWK in 20 minutes](https://ferd.ca/awk-in-20-minutes.html)
+
 # Incomplete list of nice blog posts and such
 
 * [Cryptopals: Learn stuff about crypto by doing excercises](https://cryptopals.com/)
 * [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course)
 * [Kill Math: Intuition guided math solving](http://worrydream.com/KillMath/)
 * [Azeria ARM (exploitation) tutorials](https://azeria-labs.com/writing-arm-assembly-part-1/)
+* [AI Matrix Calculus](http://explained.ai/matrix-calculus/index.html)
