@@ -2089,6 +2089,8 @@ Then, inside windows: extend partition.
 * [Code and bitters](https://codeandbitters.com/)
 * [Lifetime variance](https://github.com/sunshowers/lifetime-variance-example)
 * [AWK in 20 minutes](https://ferd.ca/awk-in-20-minutes.html)
+* [Futures Explained](https://cfsamson.github.io/books-futures-explained/introduction.html)
+* [ELF format blog series by fasterthanlime](https://fasterthanli.me/series/making-our-own-executable-packer/part-13)
 
 # Incomplete list of nice blog posts and such
 
