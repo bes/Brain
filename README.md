@@ -72,6 +72,59 @@ Host <some-other-host-trivial-name>
 
 
 [](================================================================================================================)
+
+# Network analysis
+
+Tools for analyzing local networks
+
+## Primary WAN interface:
+
+```
+ip route get 8.8.8.8
+```
+
+## List SSIDs
+
+```
+iw dev wlan0 scan | grep "SSID:" | sort | uniq
+```
+
+## IP neighbors
+
+List local ip addresses that were recently connected.
+
+This is primarily run FROM a router, e.g. OpenWRT or other router that has a shell.
+
+```
+ip neigh
+```
+
+## mDNS
+
+```
+dns-sd -B _http
+dns-sd -L "Instance name here" _http._tcp.
+dns-sd -Gv4v6 bla-bla-bla.local
+```
+
+## Port scan
+
+Scan all ports for a specific IP address
+
+```
+nmap -p- 192.168.1.2
+```
+
+TODO: Add more nmap examples
+
+
+
+
+
+
+
+
+[](================================================================================================================)
 # React
 
 ## Guides
