@@ -478,6 +478,21 @@ An app for managing Docker images locally: [Simple Docker UI](https://github.com
 
 
 
+
+## Docker commands
+
+### Download a HLS to disk
+
+```shell
+docker run --rm -it \
+  -v $(pwd):/config \
+  linuxserver/ffmpeg \
+  -f hls -i "<HLS_LINK_HERE>" -c copy /config/out.mp4
+```
+
+
+
+
 [](================================================================================================================)
 
 # Google
