@@ -297,9 +297,29 @@ See `rustclean` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh
 See `rustcargoupdate` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc) for usage.
 
 
+### cargo udeps
+
+Find unused dependencies.
+
+[https://github.com/est31/cargo-udeps](https://github.com/est31/cargo-udeps)
+
+Use:
+
+```
+cargo +nightly udeps --all-features
+```
+
 ## Resources
 
 * [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/README.html)
+
+
+## Rustdoc documentation
+
+```
+cargo doc --no-deps --all-features --open
+```
+
 
 
 
