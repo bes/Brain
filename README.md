@@ -290,11 +290,15 @@ cargo install --list
 
 ### cargo sweep
 
-See `rustclean` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc) for usage.
+`cargo sweep -r -t 10 "$HOME/repos/"`
 
 ### cargo-update
 
-See `rustcargoupdate` alias in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc) for usage.
+List what needs to be updated:
+`cargo install-update -l`
+
+Update all packages
+`cargo install-update -a`
 
 
 ### cargo udeps
