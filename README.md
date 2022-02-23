@@ -2191,3 +2191,25 @@ Then, inside windows: extend partition.
 * [Kill Math: Intuition guided math solving](http://worrydream.com/KillMath/)
 * [Azeria ARM (exploitation) tutorials](https://azeria-labs.com/writing-arm-assembly-part-1/)
 * [AI Matrix Calculus](http://explained.ai/matrix-calculus/index.html)
+* [Rust error handling](http://sled.rs/errors)
+* [Rust Type and Lifetime misconceptions](https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md)
+* [Deep learning Matrix Calculus](https://explained.ai/matrix-calculus/index.html)
+* [Build an 8-bit computer from scratch](https://eater.net/8bit)
+* [Computer Science from the bottom up](https://www.bottomupcs.com/index.xhtml)
+* [Rust: Interior Mutability Patterns](https://pitdicker.github.io/Interior-mutability-patterns/)
+* [Rust: Undrastanding Rust Through AVL Trees](http://francismurillo.github.io/2019-07-31-Understanding-Rust-Through-AVL-Trees/)
+* [Rust: YouTube: Async-Await Steve Klabnik](https://www.youtube.com/watch?v=NNwK5ZPAJCk)
+* [Rust: Dtolnay docs](https://docs.rs/dtolnay/0.0.9/dtolnay/)
+* [Rust: Zero sized references](https://ferrous-systems.com/blog/zero-sized-references/)
+* [Rust: Taking ML to production with Rust](https://www.lpalmieri.com/posts/2019-12-01-taking-ml-to-production-with-rust-a-25x-speedup/)
+* [GCP: Authenticating to gke without gcloud](https://medium.com/google-cloud/authenticating-to-gke-without-gcloud-aefd23a840a9)
+* [Rust: Inviting God's Wrath with Cursed Rust](http://troubles.md/abusing-rustc/)
+* [Experimental WebGPU in Firefox](https://hacks.mozilla.org/2020/04/experimental-webgpu-in-firefox/)
+* [Rust: Concurrency - Five easy pieces](https://medium.com/@polyglot_factotum/rust-concurrency-five-easy-pieces-871f1c62906a)
+* [Terminal: Changing text and background color](https://askubuntu.com/questions/558280/changing-colour-of-text-and-background-of-terminal)
+* [Rust: Involved lifetime example + solutions](https://twitter.com/bitshiftmask/status/1295843705354682368?s=03)
+
+
+
+
+
