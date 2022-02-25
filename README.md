@@ -290,9 +290,16 @@ cargo install --list
 
 ### cargo sweep
 
-`cargo sweep -r -t 10 "$HOME/repos/"`
+Install:
+`cargo install cargo-sweep`
+
+Removes build artifacts except for the currently installed toolchain
+`cargo sweep -r --toolchains="stable" "$HOME/repos/"`
 
 ### cargo-update
+
+Install:
+`cargo install cargo-update`
 
 List what needs to be updated:
 `cargo install-update -l`
