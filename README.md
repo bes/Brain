@@ -331,6 +331,11 @@ cargo +nightly udeps --all-features
 cargo doc --no-deps --all-features --open
 ```
 
+## Interesting projects
+
+* [cargo-nextest](https://crates.io/crates/cargo-nextest)
+* [cargo-hakari](https://crates.io/crates/cargo-hakari)
+
 
 
 
