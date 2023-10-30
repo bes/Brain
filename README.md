@@ -125,49 +125,6 @@ TODO: Add more nmap examples
 
 
 [](================================================================================================================)
-# React
-
-## Guides
-
-* [Pass props to children](https://frontarm.com/james-k-nelson/passing-data-props-children/)
-
-
-
-
-
-
-
-
-[](================================================================================================================)
-
-# Webpack
-
-## Hot reloading
-
-* [Webpack dev server](http://webpack.github.io/docs/webpack-dev-server.html)
-* [Geowarin guide to react + spring (with proxy) hot reloading](http://geowarin.github.io/spring-boot-and-react-hot.html)
-* [Node Proxy (options)](https://github.com/nodejitsu/node-http-proxy)
-
-## Size report for package
-
-Install the webpack size analyzer
-
-```
-npm install -g webpack-bundle-size-analyzer
-```
-
-Then analyze your bundle:
-
-```
-./node_modules/.bin/webpack --json | webpack-bundle-size-analyzer
-```
-
-N.B: You may not output anything using console.log from your script when analyzing, since
-`webpack-bundle-size-analyzer` will break down.
-
-
-
-[](================================================================================================================)
 
 # GPG
 
@@ -246,6 +203,10 @@ openssl aes-256-cbc -d -a -in <INFILE>.openssl -out <OUTFILE>
 
 
 
+
+
+
+
 [](================================================================================================================)
 # SSH
 
@@ -270,8 +231,6 @@ ssh -N -L 5005:localhost:4000 some.ssh.server.com
 [](================================================================================================================)
 # Rust
 
-Zsh autocompletion and other things are setup in [`.zshrc`](https://github.com/bes/Betup/blob/master/Zsh/dotzshrc).
-
 ## Rustup
 
 * `rustup update`
@@ -281,6 +240,12 @@ Zsh autocompletion and other things are setup in [`.zshrc`](https://github.com/b
 * `rustup default stable`
 
 ## Cargo
+
+Display features enabled by a dependency
+
+```shell
+cargo tree -e features
+```
 
 List installed applications
 
@@ -295,6 +260,9 @@ Install:
 
 Removes build artifacts except for the currently installed toolchain
 `cargo sweep -r --toolchains="stable" "$HOME/repos/"`
+
+Sweep everything (except for binaries and a few other artifacts)
+`cargo sweep -r --maxsize 0 "$HOME/repos/"`
 
 ### cargo-update
 
